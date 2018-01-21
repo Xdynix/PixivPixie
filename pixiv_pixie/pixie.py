@@ -14,9 +14,9 @@ from pixiv_pixie.constants import illust as illust_constants
 from pixiv_pixie.constants import ranking as ranking_constants
 from pixiv_pixie.constants import search as search_constants
 from pixiv_pixie.exceptions import LoginFailed, NoAuth, IllustError, APIError
-from pixiv_pixie.query_set import query_set
 from pixiv_pixie.illust import PixivIllust
-from utils.datatypes import JsonDict
+from pixiv_pixie.utils.datatypes import JsonDict
+from pixiv_pixie.utils.query_set import query_set
 
 TOKEN_LIFETIME = datetime.timedelta(seconds=1800)  # In fact 3600.
 
