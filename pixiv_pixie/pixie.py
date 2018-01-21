@@ -14,6 +14,7 @@ from pixiv_pixie.constants import illust as illust_constants
 from pixiv_pixie.constants import ranking as ranking_constants
 from pixiv_pixie.constants import search as search_constants
 from pixiv_pixie.exceptions import LoginFailed, NoAuth, IllustError, APIError
+from pixiv_pixie.query_set import query_set
 from pixiv_pixie.illust import PixivIllust
 from utils.datatypes import JsonDict
 
@@ -200,6 +201,7 @@ class PixivPixie(object):
     def _papi_result_need_metadata(cls, json_result):
         return json_result.page_count > 1 or json_result.type == 'ugoira'
 
+    @query_set
     def my_following_illusts(self, until=None):
         """Fetch new illusts of following users.
 
@@ -218,7 +220,7 @@ class PixivPixie(object):
                     creation time of illusts.
 
         Returns:
-            A generator that yield PixivIllust object.
+            A QuerySet that yield PixivIllust object.
 
         Raises:
             Any exceptions check_auth() will raise.
@@ -236,6 +238,7 @@ class PixivPixie(object):
                 return
             yield illust
 
+    @query_set
     def user_illusts(self, user_id):
         """Fetch a user's illusts.
 
@@ -247,7 +250,7 @@ class PixivPixie(object):
             user_id: An integer.
 
         Returns:
-            A generator that yield PixivIllust object.
+            A QuerySet that yield PixivIllust object.
 
         Raises:
             Any exceptions check_auth() will raise.
@@ -262,6 +265,7 @@ class PixivPixie(object):
             else:
                 yield PixivIllust.from_papi(json_result)
 
+    @query_set
     def ranking(
             self, mode=ranking_constants.DAY, date=None,
     ):
@@ -294,7 +298,7 @@ class PixivPixie(object):
                 A string in the format of '%Y-%m-%d', e.g., '2017-08-01'.
 
         Returns:
-            A generator that yield PixivIllust object.
+            A QuerySet that yield PixivIllust object.
 
         Raises:
             Any exceptions check_auth() will raise.
@@ -318,6 +322,7 @@ class PixivPixie(object):
             illust.rank = rank
             yield illust
 
+    @query_set
     def search(
             self, query,
             mode=search_constants.TAG,
@@ -351,7 +356,7 @@ class PixivPixie(object):
                 ASC: The output will be from old to new.
 
         Returns:
-            A generator that yield PixivIllust object.
+            A QuerySet that yield PixivIllust object.
 
         Raises:
             Any exceptions check_auth() will raise.
@@ -366,6 +371,7 @@ class PixivPixie(object):
             else:
                 yield PixivIllust.from_papi(json_result)
 
+    @query_set
     def related_illusts(self, illust_id):
         """Fetch all related illusts.
 
@@ -375,7 +381,7 @@ class PixivPixie(object):
             illust_id: An integer.
 
         Returns:
-            A generator that yield PixivIllust object.
+            A QuerySet that yield PixivIllust object.
 
         Raises:
             Any exceptions check_auth() will raise.
