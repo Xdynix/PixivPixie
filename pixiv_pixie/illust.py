@@ -1,7 +1,7 @@
 import datetime
 import dateutil.parser
 
-from pixiv_pixie.constants import illust as illust_constants
+from .constants import illust as illust_constants
 
 
 class PixivIllust(object):

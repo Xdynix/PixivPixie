@@ -1,8 +1,8 @@
-from pixiv_pixie.exceptions import (
+from .exceptions import (
     Error, LoginFailed, NoAuth, IllustError, APIError,
 )
-from pixiv_pixie.pixie import PixivPixie, PixivIllust
-from pixiv_pixie.utils.query_set import QuerySet, Q
+from .pixie import PixivPixie, PixivIllust
+from .utils.query_set import QuerySet, Q
 
 __all__ = (
     'PixivIllust',
