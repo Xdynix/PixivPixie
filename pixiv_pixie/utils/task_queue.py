@@ -28,13 +28,14 @@ class TaskStatus(Enum):
 
 # classes
 class TaskQueue:
-    def __init__(self, worker_wait=0.2):
+    def __init__(self, worker_wait=0.2, task_logger=None):
         """Initialize.
 
         Args:
             worker_wait: The period of which worker checks the halt flag.
         """
         self._worker_wait = worker_wait
+        self._task_logger = task_logger
 
         self._worker_lock = Lock()
         self._workers = []
@@ -113,6 +114,8 @@ class TaskQueue:
                         task_result._status = TaskStatus.STARTED
                         result = func(*args, **kwargs)
                     except Exception as e:
+                        if self._task_logger:
+                            self._task_logger.exception(e)
                         task_result._set_exception(e)
                         task_result._status = TaskStatus.FAILURE
                     else:

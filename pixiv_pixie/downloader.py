@@ -8,10 +8,10 @@ from .utils.task_queue import TaskQueue, TaskStatus
 
 class Downloader:
     """A simple multi-thread downloader."""
-    def __init__(self, pixie):
+    def __init__(self, pixie, logger=None):
         self._pixie = pixie
 
-        self._queue = TaskQueue()
+        self._queue = TaskQueue(task_logger=logger)
         self._lock = Lock()
         self._records = []
 
@@ -24,7 +24,7 @@ class Downloader:
         return self._queue
 
     def add_fetch_task(
-            self, source, name=None,
+            self, source, task_name=None,
             order_by=None,
             limit_before=None,
             filter_q=None, exclude_q=None,
@@ -36,7 +36,7 @@ class Downloader:
         Args:
             source: Generator that will yield PixivIllust. Or a list of
                 generator that will yield PixivIllust.
-            name: Name of the task.
+            task_name: Name of the task.
             order_by: Arguments that will be passed to QuerySet.order_by().
             limit_before: Number limitation before filtering.
             filter_q: Q object that will be passed to QuerySet.filter().
@@ -55,9 +55,9 @@ class Downloader:
         kwargs.update(**download_kwargs)
 
         with self._lock:
-            if name is None:
-                name = 'Task {}'.format(len(self._records) + 1)
-            record = _TaskRecord(name)
+            if task_name is None:
+                task_name = 'Task {}'.format(len(self._records) + 1)
+            record = _TaskRecord(task_name)
             result = self.queue.enqueue(
                 self._fetch,
                 args=(source, record),
