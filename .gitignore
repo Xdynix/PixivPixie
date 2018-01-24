@@ -1,6 +1,7 @@
 # My ignore
 .idea/
 temp*.py
+download/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
