@@ -430,7 +430,7 @@ class PixivPixie(object):
         )
         del images
 
-    def _download(self, url, file, stop_func=None):
+    def _download(self, url, file):
         requests_kwargs = self.requests_kwargs
         requests_kwargs['stream'] = True
         requests_kwargs['headers'] = {
@@ -441,8 +441,6 @@ class PixivPixie(object):
             if response.status_code != 200:
                 raise APIError('_download', response.text)
             for chunk in response.iter_content(chunk_size=1024):
-                if callable(stop_func) and stop_func():
-                    raise InterruptedError
                 if chunk:
                     file.write(chunk)
         finally:
@@ -452,7 +450,7 @@ class PixivPixie(object):
             self, illust, directory=os.path.curdir,
             name=None, addition_naming_info=None,
             convert_ugoira=True, replace=False,
-            check_exists=None, stop_func=None,
+            check_exists=None,
     ):
         """Download illust.
 
@@ -481,10 +479,6 @@ class PixivPixie(object):
             check_exists: Addition path(s) to check whether the illust exists
                 (by name). Could be a path string, a list of path string or
                 None.
-            stop_func: A callable object or None. It will be used to determined
-                whether to stop download. The callable object should not expect
-                any parameters and never raise exception.
-                Normally it is used in multi-threading.
 
         Raises:
             Any exceptions check_auth() will raise.
@@ -500,8 +494,6 @@ class PixivPixie(object):
             check_exists = [check_exists]
 
         for page, url in enumerate(illust.image_urls):
-            if callable(stop_func) and stop_func():
-                break
 
             original_name = os.path.basename(url)
             if convert_ugoira:
@@ -533,7 +525,7 @@ class PixivPixie(object):
                 os.makedirs(dir_name, exist_ok=True)
             buffer = io.BytesIO()
             try:
-                self._download(url, buffer, stop_func=stop_func)
+                self._download(url, buffer)
                 buffer.seek(0)
 
                 if illust.type == illust_constants.UGOIRA and convert_ugoira:
