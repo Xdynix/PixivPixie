@@ -1,7 +1,7 @@
+from .downloader import Downloader
 from .exceptions import (
     Error, LoginFailed, NoAuth, IllustError, APIError,
 )
-from .downloader import Downloader
 from .pixie import PixivPixie, PixivIllust
 from .utils.query_set import QuerySet, Q
 from .utils.task_queue import TaskStatus

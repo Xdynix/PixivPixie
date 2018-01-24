@@ -158,7 +158,7 @@ requests_kwargs = {
 def main():
     pixie = PixivPixie(**requests_kwargs)
     print('Logging in...')
-    pixie.login(username, password)
+    pixie.login('username', 'password')
     manager = Downloader(pixie)
     for uid in [7703097, 19898964]:
         manager.add_fetch_task(
