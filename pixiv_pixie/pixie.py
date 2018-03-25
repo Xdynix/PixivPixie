@@ -190,8 +190,7 @@ class PixivPixie(object):
             if 'error' in json_result:
                 raise APIError(call_func, json_result.error)
 
-            for item in json_result.illusts:
-                yield item
+            yield from json_result.illusts
 
             if json_result.next_url is None:
                 break
