@@ -2,10 +2,19 @@ import datetime
 
 import dateutil.parser
 
-from .constants import illust as illust_constants
+from .constants import IllustType, IllustAgeLimit
+from .utils import LazeProperty
 
 
-class PixivIllust(object):
+def _laze(attr_name):
+    def get_func(self):
+        self.update()
+        return getattr(self, attr_name)
+
+    return LazeProperty(get_func, property_name=attr_name)
+
+
+class PixivIllust:
     """Pixiv Illust object.
 
     Used to access illust info.
@@ -37,35 +46,71 @@ class PixivIllust(object):
             fetched from ranking. Starting from 1.
     """
 
-    def __init__(self):
-        self.illust_id = 0
-        self.title = ''
-        self.caption = ''
-        self.creation_time = None
+    __slots__ = (
+        'pixie',
+        'illust_id',
+        'title',
+        'caption',
+        'creation_time',
+        'width',
+        'height',
+        'image_urls',
+        'frame_delays',
+        'type',
+        'age_limit',
+        'tags',
+        'tools',
+        'user_account',
+        'user_id',
+        'user_name',
+        'total_bookmarks',
+        'total_view',
+        'rank',
+    )
 
-        self.width = 0
-        self.height = 0
+    @classmethod
+    def from_papi(cls, pixie, json_result):
+        illust = cls(pixie=pixie, illust_id=json_result.id)
+        illust.update_from_papi(json_result)
+        return illust
 
-        self.image_urls = []
-        self.frame_delays = None
+    @classmethod
+    def from_aapi(cls, pixie, json_result):
+        illust = cls(pixie=pixie, illust_id=json_result.id)
+        illust.update_from_aapi(json_result)
+        return illust
 
-        self.type = illust_constants.ILLUST
-        self.age_limit = illust_constants.ALL_AGE
+    def __init__(self, pixie, illust_id):
+        self.pixie = pixie
+        self.illust_id = illust_id
 
-        self.tags = []
-        self.tools = []
+        self.title = _laze('title')
+        self.caption = _laze('caption')
+        self.creation_time = _laze('creation_time')
 
-        self.user_account = ''
-        self.user_id = 0
-        self.user_name = ''
+        self.width = _laze('width')
+        self.height = _laze('height')
 
-        self.total_bookmarks = 0
-        self.total_view = 0
+        self.image_urls = _laze('image_urls')
+        self.frame_delays = _laze('frame_delays')
 
-        self.rank = 0
+        self.type = _laze('type')
+        self.age_limit = _laze('age_limit')
+
+        self.tags = _laze('tags')
+        self.tools = _laze('tools')
+
+        self.user_account = _laze('user_account')
+        self.user_id = _laze('user_id')
+        self.user_name = _laze('user_name')
+
+        self.total_bookmarks = _laze('total_bookmarks')
+        self.total_view = _laze('total_view')
+
+        self.rank = None
 
     def __repr__(self):
-        return '<PixivIllust illust_id={}>'.format(self.illust_id)
+        return 'PixivIllust(illust_id={})'.format(self.illust_id)
 
     @property
     def size(self):
@@ -89,107 +134,119 @@ class PixivIllust(object):
         """The number of pages."""
         return len(self.image_urls)
 
-    @classmethod
-    def from_papi(cls, json_result):
-        illust = cls()
+    def update(self):
+        illust = self.pixie.illust(self.illust_id)
 
-        illust.illust_id = json_result.id
-        illust.title = json_result.title
-        illust.caption = json_result.caption
-        illust.creation_time = datetime.datetime.strptime(
+        for attr in PixivIllust.__slots__:
+            if attr == 'pixie':
+                continue
+
+            value = getattr(illust, attr)
+            if isinstance(value, list):
+                value = value.copy()
+            setattr(self, attr, value)
+
+    def update_from_papi(self, json_result):
+        self.illust_id = json_result.id
+        self.title = json_result.title
+        if json_result.caption is not None:
+            self.caption = json_result.caption
+        self.creation_time = datetime.datetime.strptime(
             json_result.created_time,
             '%Y-%m-%d %H:%M:%S',
         )
 
-        illust.width = json_result.width
-        illust.height = json_result.height
+        self.width = json_result.width
+        self.height = json_result.height
 
-        if json_result.metadata is None:  # single page illust
-            illust.image_urls.append(json_result.image_urls.large)
-        elif json_result.page_count > 1:  # multi page illust
-            for page in json_result.metadata.pages:
-                illust.image_urls.append(page.image_urls.large)
-        else:  # ugoira
-            illust.image_urls.append(json_result
-                                     .metadata
-                                     .zip_urls
-                                     .ugoira600x600
-                                     # .replace('600x600', '1920x1080')
-                                     )
-            illust.frame_delays = []
-            for frame in json_result.metadata.frames:
-                illust.frame_delays.append(frame.delay_msec)
+        if json_result.page_count == 1:
+            if json_result.type == 'ugoira':  # ugoira
+                if json_result.metadata is not None:
+                    self.image_urls = [
+                        json_result.metadata.zip_urls.ugoira600x600,
+                    ]
+                    self.frame_delays = [
+                        frame.delay_msec
+                        for frame in json_result.metadata.frames
+                    ]
+            else:  # single page illust
+                self.image_urls = [json_result.image_urls.large]
+                self.frame_delays = None
+        else:  # multi page illust
+            if json_result.metadata is not None:
+                self.image_urls = [
+                    page.image_urls.large
+                    for page in json_result.metadata.pages
+                ]
+            self.frame_delays = None
 
-        illust.type = {
-            'illustration': illust_constants.ILLUST,
-            'manga': illust_constants.MANGA,
-            'ugoira': illust_constants.UGOIRA,
+        self.type = {
+            'illustration': IllustType.ILLUST,
+            'manga': IllustType.MANGA,
+            'ugoira': IllustType.UGOIRA,
         }[json_result.type]
-        illust.age_limit = {
-            'all-age': illust_constants.ALL_AGE,
-            'r18': illust_constants.R18,
-            'r18-g': illust_constants.R18G,
+        self.age_limit = {
+            'all-age': IllustAgeLimit.ALL_AGE,
+            'r18': IllustAgeLimit.R18,
+            'r18-g': IllustAgeLimit.R18G,
         }[json_result.age_limit]
 
-        for tag in json_result.tags:
-            illust.tags.append(tag)
-        for tool in json_result.tools:
-            illust.tools.append(tool)
+        self.tags = [tag for tag in json_result.tags]
+        if json_result.tools is not None:
+            self.tools = [tool for tool in json_result.tools]
 
-        illust.user_account = json_result.user.account
-        illust.user_id = json_result.user.id
-        illust.user_name = json_result.user.name
+        self.user_account = json_result.user.account
+        self.user_id = json_result.user.id
+        self.user_name = json_result.user.name
 
-        illust.total_bookmarks = sum(json_result.stats.favorited_count.values())
-        illust.total_view = json_result.stats.views_count
+        favorited_count = json_result.stats.favorited_count
+        if favorited_count.public is not None:
+            self.total_bookmarks = sum(favorited_count.values())
+        self.total_view = json_result.stats.views_count
 
-        return illust
+    def update_from_aapi(self, json_result):
+        self.illust_id = json_result.id
+        self.title = json_result.title
+        self.caption = json_result.caption
+        self.creation_time = dateutil.parser.parse(json_result.create_date)
 
-    @classmethod
-    def from_aapi(cls, json_result):
-        illust = cls()
-
-        illust.illust_id = json_result.id
-        illust.title = json_result.title
-        illust.caption = json_result.caption
-        illust.creation_time = dateutil.parser.parse(json_result.create_date)
-
-        illust.width = json_result.width
-        illust.height = json_result.height
+        self.width = json_result.width
+        self.height = json_result.height
 
         if json_result.page_count == 1 and json_result.type != 'ugoira':
             # single page illust
-            illust.image_urls.append(
-                json_result.meta_single_page.original_image_url)
+            self.image_urls = [
+                json_result.meta_single_page.original_image_url
+            ]
+            self.frame_delays = None
         elif json_result.page_count > 1:  # multi page illust
-            for page in json_result.meta_pages:
-                illust.image_urls.append(page.image_urls.original)
+            self.image_urls = [
+                page.image_urls.original
+                for page in json_result.meta_pages
+            ]
+            self.frame_delays = None
         else:  # ugoira
-            raise NotImplementedError
+            pass
 
-        illust.type = {
-            'illust': illust_constants.ILLUST,
-            'manga': illust_constants.MANGA,
-            'ugoira': illust_constants.UGOIRA,
+        self.type = {
+            'illust': IllustType.ILLUST,
+            'manga': IllustType.MANGA,
+            'ugoira': IllustType.UGOIRA,
         }[json_result.type]
 
-        for tag in json_result.tags:
-            illust.tags.append(tag.name)
-        for tool in json_result.tools:
-            illust.tools.append(tool)
+        self.tags = [tag.name for tag in json_result.tags]
+        self.tools = [tool for tool in json_result.tools]
 
-        if 'R-18' in illust.tags:
-            illust.age_limit = illust_constants.R18
-        elif 'R-18G' in illust.tags:
-            illust.age_limit = illust_constants.R18G
+        if 'R-18' in self.tags:
+            self.age_limit = IllustAgeLimit.R18
+        elif 'R-18G' in self.tags:
+            self.age_limit = IllustAgeLimit.R18G
         else:
-            illust.age_limit = illust_constants.ALL_AGE
+            self.age_limit = IllustAgeLimit.ALL_AGE
 
-        illust.user_account = json_result.user.account
-        illust.user_id = json_result.user.id
-        illust.user_name = json_result.user.name
+        self.user_account = json_result.user.account
+        self.user_id = json_result.user.id
+        self.user_name = json_result.user.name
 
-        illust.total_bookmarks = json_result.total_bookmarks
-        illust.total_view = json_result.total_view
-
-        return illust
+        self.total_bookmarks = json_result.total_bookmarks
+        self.total_view = json_result.total_view

@@ -146,14 +146,14 @@ class OperatorCollection:
         return cls.endswith(lhs, rhs)
 
     @classmethod
-    def range(cls, lhs, rhs):
+    def in_range(cls, lhs, rhs):
         """Range test (inclusive).
         >>> operator = OperatorCollection
-        >>> operator.range(42, (35, 70))
+        >>> operator.in_range(42, (35, 70))
         True
-        >>> operator.range(1, (1, 1))
+        >>> operator.in_range(1, (1, 1))
         True
-        >>> operator.range('a', ('', 'b'))
+        >>> operator.in_range('a', ('', 'b'))
         True
         """
         return rhs[0] <= lhs <= rhs[1]
@@ -373,6 +373,7 @@ class QuerySet:
 
 def query_set(gen):
     """This is a convenience decorator to wrap generator to QuerySet."""
+
     @wraps(gen)
     def new_gen(*args, **kwargs):
         return QuerySet(gen(*args, **kwargs))

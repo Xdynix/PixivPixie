@@ -1,27 +1,37 @@
 import datetime
+from functools import wraps
 import io
 import os
-import re
 from threading import Lock
 from zipfile import ZipFile
 
 import dateutil.parser
 import imageio
-import requests
 from pixivpy3 import PixivAPI, AppPixivAPI, PixivError
+import requests
 
-from .constants import illust as illust_constants
-from .constants import ranking as ranking_constants
-from .constants import search as search_constants
+from .constants import (
+    IllustType, RankingMode,
+    SearchMode, SearchPeriod, SearchOrder
+)
 from .exceptions import LoginFailed, NoAuth, IllustError, APIError
 from .illust import PixivIllust
-from .utils.datatypes import JsonDict
+from .utils import Json
 from .utils.query_set import query_set
 
 TOKEN_LIFETIME = datetime.timedelta(seconds=1800)  # In fact 3600.
 
 
-class PixivPixie(object):
+def _need_auth(func):
+    @wraps(func)
+    def new_func(self, *args, **kwargs):
+        self.check_auth(auto_re_login=self.auto_re_login)
+        return func(self, *args, **kwargs)
+
+    return new_func
+
+
+class PixivPixie:
     """Pixiv API interface.
 
     Remember call login() before using other methods.
@@ -31,6 +41,17 @@ class PixivPixie(object):
             expired.
     """
 
+    __slots__ = (
+        'auto_re_login',
+        '_requests_kwargs',
+        '_papi', '_aapi',
+        '_has_auth',
+        '_last_login',
+        '_check_auth_lock',
+        '_username',
+        '_password',
+    )
+
     def __init__(self, auto_re_login=True, **requests_kwargs):
         self.auto_re_login = auto_re_login
         self._requests_kwargs = requests_kwargs
@@ -39,25 +60,22 @@ class PixivPixie(object):
         self._aapi = AppPixivAPI(**requests_kwargs)
 
         self._has_auth = False
-
-        self._username = None
-        self._password = None
         self._last_login = None
         self._check_auth_lock = Lock()
 
-    def get_requests_kwargs(self):
+        self._username = None
+        self._password = None
+
+    @property
+    def requests_kwargs(self):
+        """Parameters that will be passed to requests."""
         return self._requests_kwargs
 
-    def set_requests_kwargs(self, requests_kwargs):
+    @requests_kwargs.setter
+    def requests_kwargs(self, requests_kwargs):
         self._requests_kwargs = requests_kwargs
         self._papi.requests_kwargs = requests_kwargs
         self._aapi.requests_kwargs = requests_kwargs
-
-    requests_kwargs = property(
-        get_requests_kwargs,
-        set_requests_kwargs,
-        doc="Parameters that will be passed to requests.",
-    )
 
     @property
     def has_auth(self):
@@ -90,8 +108,10 @@ class PixivPixie(object):
         """
         if not username or not password:
             raise LoginFailed
+
         try:
             self._papi.login(username, password)
+
             # self._aapi.login(username, password)
             self._aapi.access_token = self._papi.access_token
             self._aapi.user_id = self._papi.user_id
@@ -125,6 +145,7 @@ class PixivPixie(object):
                 else:
                     raise NoAuth
 
+    @_need_auth
     def illust(self, illust_id):
         """Gets a single illust.
 
@@ -139,8 +160,7 @@ class PixivPixie(object):
             IllustError: If the illust_id is invalid or the illust is blocked by
                 the Pixiv account setting.
         """
-        self.check_auth(auto_re_login=self.auto_re_login)
-        json_result = JsonDict(self._papi.works(illust_id))
+        json_result = Json(self._papi.works(illust_id))
         if json_result.status != 'success':
             error_code = json_result.errors.system.get('code')
             error_message = {
@@ -148,16 +168,18 @@ class PixivPixie(object):
                 229: 'Illust browsing restricted.',
             }
             raise IllustError(illust_id, error_message.get(error_code))
-        return PixivIllust.from_papi(json_result.response[0])
+        return PixivIllust.from_papi(self, json_result.response[0])
 
     @classmethod
-    def _papi_call(cls, call_func,
-                   page=1, per_page=30,
-                   iter_target=None, extra_yield=None,
-                   **kwargs):
+    def _papi_call(
+            cls, call_func,
+            page=1, per_page=30,
+            iter_target=None, extra_yield=None,
+            **kwargs
+    ):
         current_page = page
         while current_page:
-            json_result = JsonDict(call_func(
+            json_result = Json(call_func(
                 page=current_page, per_page=per_page, **kwargs
             ))
 
@@ -168,6 +190,7 @@ class PixivPixie(object):
                 target = json_result.response
             else:
                 target = iter_target(json_result.response)
+
             for item in target:
                 if extra_yield is None:
                     yield item
@@ -181,11 +204,11 @@ class PixivPixie(object):
 
         while True:
             try:
-                if int(kwargs['offset']) <= 5000:
+                if int(kwargs['offset']) >= 5000:
                     break
             except (KeyError, ValueError):
                 pass
-            json_result = JsonDict(call_func(**kwargs, req_auth=req_auth))
+            json_result = Json(call_func(**kwargs, req_auth=req_auth))
 
             if 'error' in json_result:
                 raise APIError(call_func, json_result.error)
@@ -196,11 +219,8 @@ class PixivPixie(object):
                 break
             kwargs = self._aapi.parse_qs(json_result.next_url)
 
-    @classmethod
-    def _papi_result_need_metadata(cls, json_result):
-        return json_result.page_count > 1 or json_result.type == 'ugoira'
-
     @query_set
+    @_need_auth
     def my_following_illusts(self, until=None):
         """Fetch new illusts of following users.
 
@@ -224,20 +244,16 @@ class PixivPixie(object):
         Raises:
             Any exceptions check_auth() will raise.
         """
-        self.check_auth(auto_re_login=self.auto_re_login)
         if isinstance(until, str):
             until = dateutil.parser.parse(until)
         for json_result in self._papi_call(self._papi.me_following_works):
-            if self._papi_result_need_metadata(json_result):
-                # TODO(Xdynix): Use lazy pattern to improve performance.
-                illust = self.illust(json_result.id)  # Fetch metadata
-            else:
-                illust = PixivIllust.from_papi(json_result)
+            illust = PixivIllust.from_papi(self, json_result)
             if until is not None and illust.creation_time < until:
                 return
             yield illust
 
     @query_set
+    @_need_auth
     def user_illusts(self, user_id):
         """Fetch a user's illusts.
 
@@ -255,18 +271,15 @@ class PixivPixie(object):
             Any exceptions check_auth() will raise.
             PAPIError: If the user_id is invalid.
         """
-        self.check_auth(auto_re_login=self.auto_re_login)
         for json_result in self._papi_call(
-                self._papi.users_works, author_id=user_id):
-            if self._papi_result_need_metadata(json_result):
-                # TODO(Xdynix): Use lazy pattern to improve performance.
-                yield self.illust(json_result.id)  # Fetch metadata
-            else:
-                yield PixivIllust.from_papi(json_result)
+                self._papi.users_works, author_id=user_id,
+        ):
+            yield PixivIllust.from_papi(self, json_result)
 
     @query_set
+    @_need_auth
     def ranking(
-            self, mode=ranking_constants.DAY, date=None,
+            self, mode=RankingMode.DAY, date=None,
     ):
         """Fetch all ranking illusts.
 
@@ -290,7 +303,8 @@ class PixivPixie(object):
                 WEEK_R18
                 WEEK_R18G
 
-                These constants are defined in pixiv_pixie.constants.ranking.
+                These constants are defined in
+                    pixiv_pixie.constants.RankingMode.
             date: Could be:
                 [default] None: Will fetch the latest ranking.
                 A date or datetime object.
@@ -302,31 +316,27 @@ class PixivPixie(object):
         Raises:
             Any exceptions check_auth() will raise.
         """
-        self.check_auth(auto_re_login=self.auto_re_login)
-        if isinstance(date, datetime.date) \
-                or isinstance(date, datetime.datetime):
+        if isinstance(date, (datetime.date, datetime.datetime)):
             date = date.strftime('%Y-%m-%d')
 
         # The response of PAPI does not contains metadata. So AAPI was used.
         for rank, json_result in enumerate(
                 self._aapi_call(
-                    self._aapi.illust_ranking, mode=mode, date=date),
+                    self._aapi.illust_ranking, mode=mode.value, date=date,
+                ),
                 start=1
         ):
-            if json_result.type == 'ugoira':
-                # TODO(Xdynix): Use lazy pattern to improve performance.
-                illust = self.illust(json_result.id)  # Fetch metadata
-            else:
-                illust = PixivIllust.from_aapi(json_result)
+            illust = PixivIllust.from_aapi(self, json_result)
             illust.rank = rank
             yield illust
 
     @query_set
+    @_need_auth
     def search(
             self, query,
-            mode=search_constants.TAG,
-            period=search_constants.ALL,
-            order=search_constants.DESC,
+            mode=SearchMode.TAG,
+            period=SearchPeriod.ALL,
+            order=SearchOrder.DESC,
     ):
         """Search illusts.
 
@@ -341,7 +351,7 @@ class PixivPixie(object):
                     acceptable.
                 CAPTION: Search in caption.
 
-                These constants are defined in pixiv_pixie.constants.search.
+                These constants are defined in pixiv_pixie.constants.SearchMode.
             period: Could be:
                 [default] ALL
                 DAY
@@ -349,10 +359,14 @@ class PixivPixie(object):
                 MONTH
 
                 This parameter is only applied when order is ASC.
-                These constants are defined in pixiv_pixie.constants.search.
+                These constants are defined in
+                    pixiv_pixie.constants.SearchPeriod.
             order: Could be:
                 [default] DESC: The output will be from new to old.
                 ASC: The output will be from old to new.
+
+                These constants are defined in
+                    pixiv_pixie.constants.SearchOrder.
 
         Returns:
             A QuerySet that yield PixivIllust object.
@@ -360,17 +374,14 @@ class PixivPixie(object):
         Raises:
             Any exceptions check_auth() will raise.
         """
-        self.check_auth(auto_re_login=self.auto_re_login)
         for json_result in self._papi_call(
                 self._papi.search_works, query=query,
-                mode=mode, period=period, order=order):
-            if self._papi_result_need_metadata(json_result):
-                # TODO(Xdynix): Use lazy pattern to improve performance.
-                yield self.illust(json_result.id)  # Fetch metadata
-            else:
-                yield PixivIllust.from_papi(json_result)
+                mode=mode.value, period=period.value, order=order.value,
+        ):
+            yield PixivIllust.from_papi(self, json_result)
 
     @query_set
+    @_need_auth
     def related_illusts(self, illust_id):
         """Fetch all related illusts.
 
@@ -385,18 +396,15 @@ class PixivPixie(object):
         Raises:
             Any exceptions check_auth() will raise.
         """
-        self.check_auth(auto_re_login=self.auto_re_login)
         for json_result in self._aapi_call(
-                self._aapi.illust_related, illust_id=illust_id):
-            if json_result.type == 'ugoira':
-                # TODO(Xdynix): Use lazy pattern to improve performance.
-                illust = self.illust(json_result.id)  # Fetch metadata
-            else:
-                illust = PixivIllust.from_aapi(json_result)
-            yield illust
+                self._aapi.illust_related, illust_id=illust_id,
+        ):
+            yield PixivIllust.from_aapi(self, json_result)
 
     @classmethod
-    def convert_zip_to_gif(cls, input_file, frame_delays, output_file=None):
+    def convert_zip_to_gif(
+            cls, input_file, frame_delays=None, output_file=None
+    ):
         """Convert a zip file that contains all frames into gif.
 
         Convert a zip file that contains all frames into gif.
@@ -406,11 +414,20 @@ class PixivPixie(object):
             frame_delays: A list of delay durations in microsecond.
             output_file: The output file. May be str or a file-like object.
         """
+        if frame_delays is None:
+            if isinstance(input_file, str):
+                frame_info = os.path.splitext(input_file)[0] + '.txt'
+                with open(frame_info, 'rt', encoding='utf-8') as f:
+                    frame_delays = [int(line) for line in f if line.strip()]
+            else:
+                raise ValueError('Could not get frame delays.')
+
         if output_file is None:
             if isinstance(input_file, str):
-                output_file = re.sub(r'\.zip$', '.gif', input_file, flags=re.I)
+                output_file = os.path.splitext(input_file)[0] + '.gif'
             else:
                 raise ValueError('Could not determined output filename.')
+
         dir_name = os.path.dirname(output_file)
         if dir_name:
             os.makedirs(dir_name, exist_ok=True)
@@ -445,6 +462,15 @@ class PixivPixie(object):
         finally:
             del response
 
+    @classmethod
+    def _check_exist(cls, path, checklist):
+        basename = os.path.basename(path)
+        for folder in checklist:
+            if os.path.exists(os.path.join(folder, basename)):
+                return True
+        return False
+
+    @_need_auth
     def download_illust(
             self, illust, directory=os.path.curdir,
             name=None, addition_naming_info=None,
@@ -482,8 +508,6 @@ class PixivPixie(object):
         Raises:
             Any exceptions check_auth() will raise.
         """
-        self.check_auth(auto_re_login=self.auto_re_login)
-
         if isinstance(illust, int):
             illust = self.illust(illust)
 
@@ -495,11 +519,9 @@ class PixivPixie(object):
         for page, url in enumerate(illust.image_urls):
 
             original_name = os.path.basename(url)
-            if convert_ugoira:
-                original_name = re.sub(
-                    r'\.zip$', '.gif', original_name, flags=re.IGNORECASE,
-                )
             root, ext = os.path.splitext(original_name)
+            if convert_ugoira and ext == '.zip':
+                ext = '.gif'
 
             if name:
                 naming_info = dict(
@@ -523,11 +545,12 @@ class PixivPixie(object):
             if dir_name:
                 os.makedirs(dir_name, exist_ok=True)
             buffer = io.BytesIO()
+
             try:
                 self._download(url, buffer)
                 buffer.seek(0)
 
-                if illust.type == illust_constants.UGOIRA and convert_ugoira:
+                if illust.type == IllustType.UGOIRA and convert_ugoira:
                     self.convert_zip_to_gif(
                         buffer, illust.frame_delays, file_path,
                     )
@@ -535,12 +558,14 @@ class PixivPixie(object):
                     with open(file_path, 'wb') as f:
                         f.write(buffer.read())
 
-                if illust.type == illust_constants.UGOIRA \
-                        and not convert_ugoira:
-                    with open(os.path.splitext(file_path)[0] + '.txt',
-                              'wt') as f:
-                        for frame_delay in illust.frame_delays:
-                            f.write('{}\n'.format(frame_delay))
+                    if illust.type == IllustType.UGOIRA:
+                        with open(
+                                os.path.splitext(file_path)[0] + '.txt',
+                                'wt',
+                        ) as f:
+                            for frame_delay in illust.frame_delays:
+                                print(frame_delay, file=f)
+
             except Exception as e:
                 try:
                     os.remove(file_path)
@@ -552,11 +577,3 @@ class PixivPixie(object):
                 del buffer
 
     download = download_illust  # shorthand
-
-    @classmethod
-    def _check_exist(cls, path, checklist):
-        basename = os.path.basename(path)
-        for folder in checklist:
-            if os.path.exists(os.path.join(folder, basename)):
-                return True
-        return False
