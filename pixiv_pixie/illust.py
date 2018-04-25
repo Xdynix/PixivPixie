@@ -3,15 +3,15 @@ import datetime
 import dateutil.parser
 
 from .constants import IllustType, IllustAgeLimit
-from .utils import LazeProperty
+from .utils import LazyProperty
 
 
-def _laze(attr_name):
+def _lazy(attr_name):
     def get_func(self):
         self.update()
         return getattr(self, attr_name)
 
-    return LazeProperty(get_func, property_name=attr_name)
+    return LazyProperty(get_func, property_name=attr_name)
 
 
 class PixivIllust:
@@ -46,27 +46,28 @@ class PixivIllust:
             fetched from ranking. Starting from 1.
     """
 
-    __slots__ = (
-        'pixie',
-        'illust_id',
-        'title',
-        'caption',
-        'creation_time',
-        'width',
-        'height',
-        'image_urls',
-        'frame_delays',
-        'type',
-        'age_limit',
-        'tags',
-        'tools',
-        'user_account',
-        'user_id',
-        'user_name',
-        'total_bookmarks',
-        'total_view',
-        'rank',
-    )
+    title = _lazy('title')
+    caption = _lazy('caption')
+    creation_time = _lazy('creation_time')
+
+    width = _lazy('width')
+    height = _lazy('height')
+
+    image_urls = _lazy('image_urls')
+    frame_delays = _lazy('frame_delays')
+
+    type = _lazy('type')
+    age_limit = _lazy('age_limit')
+
+    tags = _lazy('tags')
+    tools = _lazy('tools')
+
+    user_account = _lazy('user_account')
+    user_id = _lazy('user_id')
+    user_name = _lazy('user_name')
+
+    total_bookmarks = _lazy('total_bookmarks')
+    total_view = _lazy('total_view')
 
     @classmethod
     def from_papi(cls, pixie, json_result):
@@ -83,29 +84,6 @@ class PixivIllust:
     def __init__(self, pixie, illust_id):
         self.pixie = pixie
         self.illust_id = illust_id
-
-        self.title = _laze('title')
-        self.caption = _laze('caption')
-        self.creation_time = _laze('creation_time')
-
-        self.width = _laze('width')
-        self.height = _laze('height')
-
-        self.image_urls = _laze('image_urls')
-        self.frame_delays = _laze('frame_delays')
-
-        self.type = _laze('type')
-        self.age_limit = _laze('age_limit')
-
-        self.tags = _laze('tags')
-        self.tools = _laze('tools')
-
-        self.user_account = _laze('user_account')
-        self.user_id = _laze('user_id')
-        self.user_name = _laze('user_name')
-
-        self.total_bookmarks = _laze('total_bookmarks')
-        self.total_view = _laze('total_view')
 
         self.rank = None
 
@@ -137,10 +115,28 @@ class PixivIllust:
     def update(self):
         illust = self.pixie.illust(self.illust_id)
 
-        for attr in PixivIllust.__slots__:
-            if attr == 'pixie':
-                continue
+        attributes = [
+            'illust_id',
+            'title',
+            'caption',
+            'creation_time',
+            'width',
+            'height',
+            'image_urls',
+            'frame_delays',
+            'type',
+            'age_limit',
+            'tags',
+            'tools',
+            'user_account',
+            'user_id',
+            'user_name',
+            'total_bookmarks',
+            'total_view',
+            'rank',
+        ]
 
+        for attr in attributes:
             value = getattr(illust, attr)
             if isinstance(value, list):
                 value = value.copy()

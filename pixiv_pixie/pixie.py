@@ -16,10 +16,14 @@ from .constants import (
 )
 from .exceptions import LoginFailed, NoAuth, IllustError, APIError
 from .illust import PixivIllust
-from .utils import Json
+from .utils import Json, download
 from .utils.query_set import query_set
 
 TOKEN_LIFETIME = datetime.timedelta(seconds=1800)  # In fact 3600.
+
+ILLUST_DOWNLOAD_HEADERS = {
+    'Referer': 'https://app-api.pixiv.net/',
+}
 
 
 def _need_auth(func):
@@ -40,17 +44,6 @@ class PixivPixie:
         auto_re_login: If true, PixivPixie will auto re-login when login token
             expired.
     """
-
-    __slots__ = (
-        'auto_re_login',
-        '_requests_kwargs',
-        '_papi', '_aapi',
-        '_has_auth',
-        '_last_login',
-        '_check_auth_lock',
-        '_username',
-        '_password',
-    )
 
     def __init__(self, auto_re_login=True, **requests_kwargs):
         self.auto_re_login = auto_re_login
@@ -446,21 +439,28 @@ class PixivPixie:
         )
         del images
 
-    def _download(self, url, file):
+    def _download_pixiv_url(self, url, file):
         requests_kwargs = self.requests_kwargs
         requests_kwargs['stream'] = True
-        requests_kwargs['headers'] = {
-            'Referer': 'https://app-api.pixiv.net/',
-        }
-        response = requests.get(url, **requests_kwargs)
+        requests_kwargs['headers'] = ILLUST_DOWNLOAD_HEADERS
+
         try:
-            if response.status_code != 200:
-                raise APIError('_download', response.text)
-            for chunk in response.iter_content(chunk_size=1024):
-                if chunk:
-                    file.write(chunk)
-        finally:
-            del response
+            wrote_size = 0
+            total_size = None
+
+            for wrote_size, total_size in download(
+                    file, url, **requests_kwargs,
+            ):
+                pass
+
+            if total_size is not None and wrote_size < total_size:
+                raise APIError(
+                    self.download_illust,
+                    'Unexpected connection interruption.',
+                )
+
+        except requests.HTTPError as e:
+            raise APIError(self.download_illust, e.response.text) from e
 
     @classmethod
     def _check_exist(cls, path, checklist):
@@ -524,11 +524,13 @@ class PixivPixie:
                 ext = '.gif'
 
             if name:
-                naming_info = dict(
-                    illust=illust, page=page,
-                    original_name=original_name,
-                    root=root, ext=ext,
-                )
+                naming_info = {
+                    'illust': illust,
+                    'page': page,
+                    'original_name': original_name,
+                    'root': root,
+                    'ext': ext,
+                }
                 if addition_naming_info:
                     naming_info.update(addition_naming_info)
                 filename = name.format(**naming_info)
@@ -547,7 +549,7 @@ class PixivPixie:
             buffer = io.BytesIO()
 
             try:
-                self._download(url, buffer)
+                self._download_pixiv_url(url, buffer)
                 buffer.seek(0)
 
                 if illust.type == IllustType.UGOIRA and convert_ugoira:
@@ -572,7 +574,7 @@ class PixivPixie:
                 except OSError:
                     pass
                 finally:
-                    raise e
+                    raise e from e
             finally:
                 del buffer
 

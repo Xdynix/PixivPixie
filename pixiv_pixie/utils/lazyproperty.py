@@ -1,4 +1,4 @@
-class LazeProperty:
+class LazyProperty:
     def __init__(self, func, property_name=None):
         if property_name is None:
             property_name = func.__name__
