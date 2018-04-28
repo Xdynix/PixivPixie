@@ -92,11 +92,11 @@ def main():
     print_illusts(pixie.related_illusts(63808518), limit=50)
 
     # Download illust
-    pixie.download_illust(illust, directory='download')
+    pixie.download(illust, directory='download')
 
     # Download ugoira and manually convert it
     illust = pixie.illust(64421170)
-    pixie.download_illust(
+    pixie.download(
         illust, directory='download', name='ugoira{ext}',
         convert_ugoira=False,
     )
