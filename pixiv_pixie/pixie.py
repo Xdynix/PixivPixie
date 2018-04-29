@@ -577,6 +577,7 @@ class PixivPixie:
             root, ext = os.path.splitext(original_name)
             if convert_ugoira and ext == '.zip':
                 ext = '.gif'
+                original_name = root + ext
 
             if name:
                 naming_info = {

@@ -147,6 +147,8 @@ class PixivIllust:
         self.title = json_result.title
         if json_result.caption is not None:
             self.caption = json_result.caption
+        else:
+            self.caption = ''
         self.creation_time = datetime.datetime.strptime(
             json_result.created_time,
             '%Y-%m-%d %H:%M:%S',
