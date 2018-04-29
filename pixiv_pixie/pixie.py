@@ -16,7 +16,9 @@ from .constants import (
     IllustType, RankingMode,
     SearchMode, SearchPeriod, SearchOrder
 )
-from .exceptions import LoginFailed, NoAuth, IllustError, APIError
+from .exceptions import (
+    LoginFailed, NoAuth, IllustError, APIError, DownloadError
+)
 from .illust import PixivIllust
 from .utils import Json, download
 from .utils.query_set import query_set
@@ -379,13 +381,15 @@ class PixivPixie:
 
     @query_set
     @_need_auth
-    def related_illusts(self, illust_id):
+    def related_illusts(self, illust_id, limit=None):
         """Fetch all related illusts.
 
         Fetch all related illusts of a provided illust.
 
         Args:
             illust_id: An integer.
+            limit: Max number of illust to be yield. If limit=None, there will
+                be no limit.
 
         Returns:
             A QuerySet that yield PixivIllust object.
@@ -393,9 +397,12 @@ class PixivPixie:
         Raises:
             Any exceptions check_auth() will raise.
         """
-        for json_result in self._aapi_call(
+        for cnt, json_result in enumerate(self._aapi_call(
                 self._aapi.illust_related, illust_id=illust_id,
-        ):
+        ), start=1):
+            if limit is not None and cnt > limit:
+                break
+
             yield PixivIllust.from_aapi(self, json_result)
 
     @classmethod
@@ -510,13 +517,13 @@ class PixivPixie:
                         downloaded.append(frame_file)
 
                 break
-            except Exception:
+            except Exception as e:
                 self._remove_file(file_path)
 
                 if max_tries is None or tries < max_tries:
                     continue
 
-                raise
+                raise DownloadError(illust, e) from e
 
     @_need_auth
     def download(

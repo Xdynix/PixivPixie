@@ -3,10 +3,11 @@ from .constants import (
     SearchMode, SearchPeriod, SearchOrder
 )
 from .exceptions import (
-    Error, LoginFailed, NoAuth, IllustError, APIError,
+    Error, LoginFailed, NoAuth, IllustError, APIError, DownloadError,
 )
 from .illust import PixivIllust
 from .pixie import PixivPixie
+from .queen import PixieQueen
 from .utils import QuerySet, Q
 
 __all__ = (
@@ -20,10 +21,12 @@ __all__ = (
     'NoAuth',
     'IllustError',
     'APIError',
+    'DownloadError',
     'PixivIllust',
     'PixivPixie',
+    'PixieQueen',
     'QuerySet',
     'Q',
 )
 
-__version__ = '1.3.1'
+__version__ = '1.4.0'

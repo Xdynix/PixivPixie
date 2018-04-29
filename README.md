@@ -140,3 +140,9 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+### CLI
+
+The library can be run as a script via `python -m pixiv_pixie`.
+
+Check `-h` for more detail.

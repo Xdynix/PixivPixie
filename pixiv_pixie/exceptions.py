@@ -32,3 +32,13 @@ class APIError(Error):
     def __str__(self):
         return "Error while calling API request '{}'. Errors: {}.".format(
             self.call_func.__name__, self.errors)
+
+
+class DownloadError(Error):
+    def __init__(self, illust, msg):
+        self.illust = illust
+        self.msg = msg
+
+    def __str__(self):
+        return 'Error while downloading {}: {}'.format(
+            self.illust, self.msg)
