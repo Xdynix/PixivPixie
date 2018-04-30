@@ -525,6 +525,37 @@ class PixivPixie:
 
                 raise DownloadError(illust, e) from e
 
+    @classmethod
+    def _get_file_path(
+            cls, illust, page, url,
+            convert_ugoira,
+            directory, name,
+            addition_naming_info,
+    ):
+        original_name = os.path.basename(url)
+        root, ext = os.path.splitext(original_name)
+        if convert_ugoira and ext == '.zip':
+            ext = '.gif'
+            original_name = root + ext
+
+        if name:
+            naming_info = {
+                'illust': illust,
+                'page': page,
+                'original_name': original_name,
+                'root': root,
+                'ext': ext,
+            }
+            if addition_naming_info:
+                naming_info.update(addition_naming_info)
+            filename = name.format(**naming_info)
+        else:
+            filename = original_name
+
+        file_path = os.path.join(directory, filename)
+
+        return file_path
+
     @_need_auth
     def download(
             self, illust, directory=os.path.curdir,
@@ -579,28 +610,13 @@ class PixivPixie:
         downloaded_files = []
 
         for page, url in enumerate(illust.image_urls):
+            file_path = self._get_file_path(
+                illust, page, url,
+                convert_ugoira,
+                directory, name,
+                addition_naming_info,
+            )
 
-            original_name = os.path.basename(url)
-            root, ext = os.path.splitext(original_name)
-            if convert_ugoira and ext == '.zip':
-                ext = '.gif'
-                original_name = root + ext
-
-            if name:
-                naming_info = {
-                    'illust': illust,
-                    'page': page,
-                    'original_name': original_name,
-                    'root': root,
-                    'ext': ext,
-                }
-                if addition_naming_info:
-                    naming_info.update(addition_naming_info)
-                filename = name.format(**naming_info)
-            else:
-                filename = original_name
-
-            file_path = os.path.join(directory, filename)
             if not replace and os.path.exists(file_path):
                 continue
             if self._check_exist(file_path, check_exists):
