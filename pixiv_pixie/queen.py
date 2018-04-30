@@ -3,6 +3,7 @@ from functools import wraps
 from itertools import count
 
 from .pixie import PixivPixie
+from .utils import safe_callback
 
 
 class FunctionCall:
@@ -83,7 +84,7 @@ class PixieQueen(PixivPixie):
             # source
             fetch_func, args=None, kwargs=None,
             # task setting
-            max_tries=1,
+            max_tries=1, submit_download_callback=None,
             # filter
             order_by=None,
             limit_before=None,
@@ -100,6 +101,9 @@ class PixieQueen(PixivPixie):
             kwargs: Keyword arguments of fetch_func.
             max_tries: Max try times when fetch failed. If max_tries=None, it
                 will loop infinitely until finished.
+            submit_download_callback: Will be called when a download() has been
+                submitted, with the future and kwargs as its arguments. If the
+                callable raises an Exception, it will be logged and ignored.
             order_by: Arguments that will be passed to QuerySet.order_by().
             limit_before: Number limitation before filtering.
             filter_q: Q object that will be passed to QuerySet.filter().
@@ -117,6 +121,9 @@ class PixieQueen(PixivPixie):
             args = []
         if kwargs is None:
             kwargs = {}
+
+        if submit_download_callback is not None:
+            submit_download_callback = safe_callback(submit_download_callback)
 
         fetch = FunctionCall(fetch_func, *args, **kwargs)
 
@@ -141,14 +148,17 @@ class PixieQueen(PixivPixie):
                     qs = qs.limit(limit_after)
 
                 for order, illust in qs.enumerate(start=1):
-                    kwargs = download_kwargs.copy()
-                    kwargs['illust'] = illust
-                    if kwargs.get('addition_naming_info') is None:
-                        kwargs['addition_naming_info'] = {
+                    kwargs_copy = download_kwargs.copy()
+                    kwargs_copy['illust'] = illust
+                    if kwargs_copy.get('addition_naming_info') is None:
+                        kwargs_copy['addition_naming_info'] = {
                             'order': order,
                         }
 
-                    futures.append((illust, self.download(**kwargs)))
+                    future = self.download(**kwargs_copy)
+                    futures.append((illust, future))
+                    if submit_download_callback is not None:
+                        submit_download_callback(future, kwargs_copy)
 
                 return futures
             except Exception as e:

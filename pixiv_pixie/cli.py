@@ -10,7 +10,7 @@ import dateutil.parser
 from .constants import RankingMode, SearchMode, IllustType
 from .exceptions import Error as PixieError
 from .queen import PixieQueen
-from .utils.query_set import Q
+from .utils import with_interval, Q
 
 logger = logging.getLogger(__name__)
 
@@ -238,17 +238,14 @@ def get_download_kwargs(args):
     }
 
 
+@with_interval(interval=50)
 def show_status(finished, total):
     s = '{finished:>3}/{total:<3}'.format(finished=finished, total=total)
     sys.stdout.write('\r{}'.format(s))
     sys.stdout.flush()
 
 
-def cli():
-    config_logger()
-    parser = get_parser()
-    args = parser.parse_args()
-
+def cli(args):
     if args.worker <= 0:
         raise TypeError('At least one worker required.')
 
@@ -322,46 +319,63 @@ def cli():
     download_futures = []
     finished_download = 0
 
+    def update_status():
+        show_status(finished_download, len(download_futures))
+
+    def download_callback(_):
+        nonlocal finished_download
+        finished_download += 1
+
+        update_status()
+
+    def submit_download_callback(future, _):
+        download_futures.append(future)
+        future.add_done_callback(download_callback)
+
+        update_status()
+
     with queen:
-        print('Fetching...')
+        print('Downloading...')
+
         for fetch_func, fetch_args in zip(fetch_func, fetch_args):
             fetch_futures.append(queen.fetch_and_download(
                 fetch_func, args=fetch_args,
                 max_tries=args.max_tries,
+                submit_download_callback=submit_download_callback,
                 **filter_option,
                 **download_kwargs,
             ))
 
-        print('Downloading...')
         for fetch_future in as_completed(fetch_futures):
             try:
-                current_download_futures = fetch_future.result()
+                fetch_future.result()
             except Exception as e:
-                if hasattr(e, 'fetch_call'):
-                    logger.error('Error while fetching {}'.format(e.fetch_call))
+                logger.error('Error while fetching {}:'.format(
+                    getattr(e, 'fetch_call', '<Unknown>'),
+                ))
                 logger.exception(e)
-            else:
-                for _, download_future in current_download_futures:
-                    download_futures.append(download_future)
-
-            show_status(finished_download, len(download_futures))
+            finally:
+                update_status()
 
         for download_future in as_completed(download_futures):
             try:
                 download_future.result()
             except Exception as e:
                 logger.error(e)
+                logger.exception(e)
             finally:
-                finished_download += 1
+                update_status()
 
-            show_status(finished_download, len(download_futures))
-
-    print('Done.')
+    print('\nDone.')
 
 
 def main():
+    config_logger()
     try:
-        cli()
+        parser = get_parser()
+        args = parser.parse_args()
+
+        cli(args)
     except (TypeError, PixieError) as e:
         print(e)
         logger.error(e)
