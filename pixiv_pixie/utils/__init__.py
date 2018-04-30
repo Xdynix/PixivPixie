@@ -1,12 +1,11 @@
-from .datatypes import Json
-from .download import download
-from .lazyproperty import LazyProperty
+from .datatypes import Json, LazyProperty
+from .functions import download
 from .query_set import QuerySet, Q
 
 __all__ = (
     'Json',
-    'download',
     'LazyProperty',
+    'download',
     'QuerySet',
     'Q',
 )

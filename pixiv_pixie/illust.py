@@ -3,7 +3,7 @@ import datetime
 import dateutil.parser
 
 from .constants import IllustType, IllustAgeLimit
-from .utils import LazyProperty
+from pixiv_pixie.utils import LazyProperty
 
 
 def _lazy(attr_name):
