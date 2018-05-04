@@ -245,8 +245,16 @@ def show_status(finished, total):
     sys.stdout.flush()
 
 
+def clear_futures(futures):
+    for future in as_completed(futures):
+        try:
+            future.result()
+        except Exception as e:
+            logger.error(e)
+
+
 def cli(args):
-    args.worker = min(1, args.worker)
+    args.worker = max(1, args.worker)
 
     if args.max_tries <= 0:
         args.max_tries = None
@@ -278,7 +286,14 @@ def cli(args):
             raise TypeError('Illust ID is required in \'illust\' task.')
 
         print('Downloading...')
-        queen.download(args.illust_id, **download_kwargs).result()
+
+        with queen:
+            download_targets = queen.download(
+                args.illust_id,
+                **download_kwargs,
+            ).result()
+            clear_futures([future for url, path, future in download_targets])
+
         print('Done.')
         return
     elif args.task == 'following':
@@ -340,16 +355,6 @@ def cli(args):
         download_future.add_done_callback(download_done_callback)
 
         update_status()
-
-    def clear_futures(futures):
-        for future in as_completed(futures):
-            try:
-                future.result()
-            except Exception as e:
-                logger.error(e)
-                logger.exception(e)
-            finally:
-                update_status()
 
     with queen:
         print('Downloading...')
