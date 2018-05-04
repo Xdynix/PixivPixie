@@ -450,81 +450,6 @@ class PixivPixie:
         )
         del images
 
-    def _download_pixiv_url(self, url, file):
-        requests_kwargs = self.requests_kwargs
-        requests_kwargs['stream'] = True
-        requests_kwargs['headers'] = ILLUST_DOWNLOAD_HEADERS
-
-        try:
-            wrote_size = 0
-            total_size = None
-
-            for wrote_size, total_size in download(
-                    file, url, **requests_kwargs,
-            ):
-                pass
-
-            if total_size is not None and wrote_size < total_size:
-                raise APIError(
-                    self.download,
-                    'Unexpected connection interruption.',
-                )
-
-        except requests.HTTPError as e:
-            raise APIError(self.download, e.response.text) from e
-
-    @classmethod
-    def _check_exist(cls, path, checklist):
-        basename = os.path.basename(path)
-        for folder in checklist:
-            if os.path.exists(os.path.join(folder, basename)):
-                return True
-        return False
-
-    @classmethod
-    def _remove_file(cls, path):
-        try:
-            os.remove(path)
-        except OSError:
-            pass
-
-    def _download_one_url(
-            self, illust, url,
-            convert_ugoira, file_path, max_tries,
-            downloaded,
-    ):
-        for tries in count(start=1):
-            try:
-                buffer = io.BytesIO()
-                self._download_pixiv_url(url, buffer)
-                buffer.seek(0)
-
-                if illust.type == IllustType.UGOIRA and convert_ugoira:
-                    self.convert_zip_to_gif(
-                        buffer, illust.frame_delays, file_path,
-                    )
-                    downloaded.append(file_path)
-                else:
-                    with open(file_path, 'wb') as f:
-                        copyfileobj(buffer, f)
-                    downloaded.append(file_path)
-
-                    if illust.type == IllustType.UGOIRA:
-                        frame_file = os.path.splitext(file_path)[0] + '.txt'
-                        with open(frame_file, 'wt') as f:
-                            for frame_delay in illust.frame_delays:
-                                print(frame_delay, file=f)
-                        downloaded.append(frame_file)
-
-                break
-            except Exception as e:
-                self._remove_file(file_path)
-
-                if max_tries is None or tries < max_tries:
-                    continue
-
-                raise DownloadError(illust, e) from e
-
     @classmethod
     def _get_file_path(
             cls, illust, page, url,
@@ -534,6 +459,7 @@ class PixivPixie:
     ):
         original_name = os.path.basename(url)
         root, ext = os.path.splitext(original_name)
+
         if convert_ugoira and ext == '.zip':
             ext = '.gif'
             original_name = root + ext
@@ -556,12 +482,129 @@ class PixivPixie:
 
         return file_path
 
+    @classmethod
+    def _try_remove_file(cls, path):
+        if not isinstance(path, str) or not path:
+            return
+
+        try:
+            os.remove(path)
+        except OSError:
+            pass
+
+    @classmethod
+    def _check_exist(cls, path, checklist):
+        basename = os.path.basename(path)
+
+        for folder in checklist:
+            if os.path.exists(os.path.join(folder, basename)):
+                return True
+
+        return False
+
+    def _download_illust_to_file(self, url, file):
+        requests_kwargs = self.requests_kwargs.copy()
+        requests_kwargs['stream'] = True
+        requests_kwargs['headers'] = ILLUST_DOWNLOAD_HEADERS
+
+        try:
+            wrote_size = 0
+            total_size = None
+
+            for wrote_size, total_size in download(
+                    file, url, **requests_kwargs,
+            ):
+                pass
+
+            if total_size is not None and wrote_size < total_size:
+                raise APIError(
+                    self.download,
+                    'Unexpected connection interruption.',
+                )
+
+        except requests.HTTPError as e:
+            raise APIError(self.download, e.response.text) from e
+
+    def _download_one_url(
+            self, illust, url, path,
+            convert_ugoira,
+            replace,
+            check_exists,
+            max_tries,
+            fake_download,
+    ):
+        if not replace and os.path.exists(path):
+            return False
+
+        if self._check_exist(path, check_exists):
+            return False
+
+        if fake_download:
+            return False
+
+        dir_name = os.path.dirname(path)
+        if dir_name:
+            os.makedirs(dir_name, exist_ok=True)
+
+        frame_path = None
+
+        for tries in count(start=1):
+            try:
+                buffer = io.BytesIO()
+                self._download_illust_to_file(url, buffer)
+                buffer.seek(0)
+
+                if illust.type == IllustType.UGOIRA and convert_ugoira:
+                    self.convert_zip_to_gif(buffer, illust.frame_delays, path)
+                else:
+                    with open(path, 'wb') as f:
+                        copyfileobj(buffer, f)
+
+                    if illust.type == IllustType.UGOIRA:
+                        frame_path = os.path.splitext(path)[0] + '.txt'
+                        with open(frame_path, 'wt') as f:
+                            for frame_delay in illust.frame_delays:
+                                print(frame_delay, file=f)
+
+                return True
+            except Exception as e:
+                self._try_remove_file(path)
+                self._try_remove_file(frame_path)
+
+                if max_tries is None or tries < max_tries:
+                    continue
+
+                raise DownloadError(illust, e) from e
+
+    def _download_multiple_urls(
+            self, illust, target,
+            convert_ugoira,
+            replace,
+            check_exists,
+            max_tries,
+            fake_download,
+    ):
+        result = []
+
+        for url, path in target:
+            result.append((url, path, self._download_one_url(
+                illust, url, path,
+                convert_ugoira=convert_ugoira,
+                replace=replace,
+                check_exists=check_exists,
+                max_tries=max_tries,
+                fake_download=fake_download,
+            )))
+
+        return result
+
     @_need_auth
     def download(
             self, illust, directory=os.path.curdir,
             name=None, addition_naming_info=None,
             convert_ugoira=True, replace=False,
-            check_exists=None, max_tries=1,
+            check_exists=None, max_tries=5,
+            fake_download=False,
     ):
         """Download illust.
 
@@ -592,12 +635,15 @@ class PixivPixie:
                 None.
             max_tries: Max try times when download failed. If max_tries=None, it
                 will loop infinitely until finished.
+            fake_download: If True, no file will be actually downloaded.
 
         Returns:
-            A list of downloaded file paths.
+            A list of download result of each page. Each result is a tuple of
+                (url, path, downloaded).
 
         Raises:
             Any exceptions check_auth() will raise.
+            DownloadError.
         """
         if isinstance(illust, int):
             illust = self.illust(illust)
@@ -607,35 +653,24 @@ class PixivPixie:
         elif isinstance(check_exists, str):
             check_exists = [check_exists]
 
-        downloaded_files = []
-
-        for page, url in enumerate(illust.image_urls):
-            file_path = self._get_file_path(
-                illust, page, url,
-                convert_ugoira,
-                directory, name,
-                addition_naming_info,
+        download_target = [
+            (
+                url,
+                self._get_file_path(
+                    illust, page, url,
+                    convert_ugoira,
+                    directory, name,
+                    addition_naming_info,
+                ),
             )
+            for page, url in enumerate(illust.image_urls)
+        ]
 
-            if not replace and os.path.exists(file_path):
-                continue
-            if self._check_exist(file_path, check_exists):
-                continue
-
-            dir_name = os.path.dirname(file_path)
-            if dir_name:
-                os.makedirs(dir_name, exist_ok=True)
-
-            try:
-                self._download_one_url(
-                    illust, url,
-                    convert_ugoira, file_path,
-                    max_tries, downloaded_files,
-                )
-            except Exception:
-                for file in downloaded_files:
-                    self._remove_file(file)
-
-                raise
-
-        return downloaded_files
+        return self._download_multiple_urls(
+            illust, download_target,
+            convert_ugoira=convert_ugoira,
+            replace=replace,
+            check_exists=check_exists,
+            max_tries=max_tries,
+            fake_download=fake_download,
+        )

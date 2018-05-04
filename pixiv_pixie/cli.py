@@ -246,8 +246,7 @@ def show_status(finished, total):
 
 
 def cli(args):
-    if args.worker <= 0:
-        raise TypeError('At least one worker required.')
+    args.worker = min(1, args.worker)
 
     if args.max_tries <= 0:
         args.max_tries = None
@@ -317,22 +316,40 @@ def cli(args):
 
     fetch_futures = []
     download_futures = []
+    page_download_futures = []
     finished_download = 0
 
     def update_status():
-        show_status(finished_download, len(download_futures))
+        show_status(finished_download, len(page_download_futures))
 
-    def download_callback(_):
+    def inc_finished_download(*_):
         nonlocal finished_download
         finished_download += 1
 
         update_status()
 
-    def submit_download_callback(future, _):
-        download_futures.append(future)
-        future.add_done_callback(download_callback)
+    def download_done_callback(download_future):
+        for url, path, page_download_future in download_future.result():
+            page_download_futures.append(page_download_future)
+            page_download_future.add_done_callback(inc_finished_download)
 
         update_status()
+
+    def submit_download_callback(download_future, _):
+        download_futures.append(download_future)
+        download_future.add_done_callback(download_done_callback)
+
+        update_status()
+
+    def clear_futures(futures):
+        for future in as_completed(futures):
+            try:
+                future.result()
+            except Exception as e:
+                logger.error(e)
+                logger.exception(e)
+            finally:
+                update_status()
 
     with queen:
         print('Downloading...')
@@ -346,25 +363,9 @@ def cli(args):
                 **download_kwargs,
             ))
 
-        for fetch_future in as_completed(fetch_futures):
-            try:
-                fetch_future.result()
-            except Exception as e:
-                logger.error('Error while fetching {}:'.format(
-                    getattr(e, 'fetch_call', '<Unknown>'),
-                ))
-                logger.exception(e)
-            finally:
-                update_status()
-
-        for download_future in as_completed(download_futures):
-            try:
-                download_future.result()
-            except Exception as e:
-                logger.error(e)
-                logger.exception(e)
-            finally:
-                update_status()
+        clear_futures(fetch_futures)
+        clear_futures(download_futures)
+        clear_futures(page_download_futures)
 
     print('\nDone.')
 

@@ -73,8 +73,14 @@ class PixieQueen(PixivPixie):
         self._executor.shutdown(wait=wait)
 
     @_submit
+    def _download_one_url(self, *args, **kwargs):
+        return super()._download_one_url(*args, **kwargs)
+
+    @_submit
     def download(self, *args, **kwargs):
         """Similar to PixivPixie.download(), but will returns a Future object.
+        And the result of downloading each page will be a tuple of
+        (url, path, future_obj_downloaded).
         """
         return super().download(*args, **kwargs)
 
@@ -84,7 +90,7 @@ class PixieQueen(PixivPixie):
             # source
             fetch_func, args=None, kwargs=None,
             # task setting
-            max_tries=1, submit_download_callback=None,
+            max_tries=5, submit_download_callback=None,
             # filter
             order_by=None,
             limit_before=None,
@@ -94,6 +100,8 @@ class PixieQueen(PixivPixie):
             **download_kwargs
     ):
         """Fetch illusts from a query set and download them.
+
+        An additional parameter naming information 'order'(1-based) is provided.
 
         Args:
             fetch_func: Function that will return a QuerySet of PixivIllust.
@@ -115,7 +123,7 @@ class PixieQueen(PixivPixie):
 
         Returns:
             A Future object. The result of Future object is a list of
-                tuple(illust, future).
+                tuple(illust, future_obj_download_result).
         """
         if args is None:
             args = []
