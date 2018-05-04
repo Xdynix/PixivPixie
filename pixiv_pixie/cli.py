@@ -11,6 +11,7 @@ from .constants import RankingMode, SearchMode, IllustType
 from .exceptions import Error as PixieError
 from .queen import PixieQueen
 from .utils import with_interval, Q
+from .utils.query_set import query_set
 
 logger = logging.getLogger(__name__)
 
@@ -253,6 +254,11 @@ def clear_futures(futures):
             logger.error(e)
 
 
+@query_set
+def yield_one_illust(pixie, illust_id):
+    yield pixie.illust(illust_id)
+
+
 def cli(args):
     args.worker = max(1, args.worker)
 
@@ -285,17 +291,8 @@ def cli(args):
         if not args.illust_id:
             raise TypeError('Illust ID is required in \'illust\' task.')
 
-        print('Downloading...')
-
-        with queen:
-            download_targets = queen.download(
-                args.illust_id,
-                **download_kwargs,
-            ).result()
-            clear_futures([future for url, path, future in download_targets])
-
-        print('Done.')
-        return
+        fetch_func = [yield_one_illust]
+        fetch_args = [(queen, args.illust_id)]
     elif args.task == 'following':
         if not args.earliest:
             raise TypeError('Earliest date is required in \'following\' task.')
