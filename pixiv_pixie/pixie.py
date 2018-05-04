@@ -653,18 +653,27 @@ class PixivPixie:
         elif isinstance(check_exists, str):
             check_exists = [check_exists]
 
-        download_target = [
-            (
-                url,
-                self._get_file_path(
-                    illust, page, url,
-                    convert_ugoira,
-                    directory, name,
-                    addition_naming_info,
-                ),
-            )
-            for page, url in enumerate(illust.image_urls)
-        ]
+        download_target = []
+        for tries in count(start=1):
+            try:
+                download_target = [
+                    (
+                        url,
+                        self._get_file_path(
+                            illust, page, url,
+                            convert_ugoira,
+                            directory, name,
+                            addition_naming_info,
+                        ),
+                    )
+                    for page, url in enumerate(illust.image_urls)
+                ]
+                break
+            except Exception as e:
+                if max_tries is None or tries < max_tries:
+                    continue
+
+                raise DownloadError(illust, e) from e
 
         return self._download_multiple_urls(
             illust, download_target,
