@@ -28,6 +28,18 @@ It's welcome to help me implement those APIs.
 P.S. English and Chinese discussion is OK. Please forgive me for the poor
 English. Fixing typo is also welcome.
 
+
+## Build
+
+```bash
+git clone https://github.com/Xdynix/PixivPixie.git
+cd PixivPixie
+pip install -U -r requirements.txt
+python bundle_cli.py
+```
+
+The packaged file will be in `dist` folder.
+
 ## Usage
 
 ### Basic
