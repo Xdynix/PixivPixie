@@ -266,7 +266,7 @@ def cli(args):
         args.max_tries = None
 
     requests_kwargs = {
-        # 'timeout': (5, 30),
+        'timeout': (10, 60),
     }
     if args.proxy:
         requests_kwargs['proxies'] = {
