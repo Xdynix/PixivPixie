@@ -149,7 +149,8 @@ class PixieQueen(PixivPixie):
 
                 if filter_q is not None:
                     qs = qs.filter(filter_q)
-                elif exclude_q is not None:
+
+                if exclude_q is not None:
                     qs = qs.exclude(exclude_q)
 
                 if limit_after is not None:

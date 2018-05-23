@@ -200,7 +200,8 @@ def get_filter_option(args):
     if args.no_r18:
         tag_black_list.append('R-18')
         tag_black_list.append('R-18G')
-    exclude_q = Q()
+
+    exclude_q = ~Q()
     for tag in tag_black_list:
         exclude_q = exclude_q | Q(tags__contains=tag)
     for user in user_black_list:
