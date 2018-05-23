@@ -1,16 +1,16 @@
 import datetime
-from functools import wraps
 import io
-from itertools import count
 import os
+from functools import wraps
+from itertools import count
 from shutil import copyfileobj
 from threading import Lock
 from zipfile import ZipFile
 
 import dateutil.parser
 import imageio
-from pixivpy3 import PixivAPI, AppPixivAPI, PixivError
 import requests
+from pixivpy3 import PixivAPI, AppPixivAPI, PixivError
 
 from .constants import (
     IllustType, RankingMode,
@@ -543,8 +543,6 @@ class PixivPixie:
             return False
 
         dir_name = os.path.dirname(path)
-        if dir_name:
-            os.makedirs(dir_name, exist_ok=True)
 
         frame_path = None
 
@@ -557,6 +555,9 @@ class PixivPixie:
                 if illust.type == IllustType.UGOIRA and convert_ugoira:
                     self.convert_zip_to_gif(buffer, illust.frame_delays, path)
                 else:
+                    if dir_name:
+                        os.makedirs(dir_name, exist_ok=True)
+
                     with open(path, 'wb') as f:
                         copyfileobj(buffer, f)
 

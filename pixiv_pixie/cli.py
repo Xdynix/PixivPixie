@@ -1,9 +1,9 @@
 import argparse
-from collections import OrderedDict
-from concurrent.futures import as_completed
 import logging
 import os
 import sys
+from collections import OrderedDict
+from concurrent.futures import as_completed
 
 import dateutil.parser
 

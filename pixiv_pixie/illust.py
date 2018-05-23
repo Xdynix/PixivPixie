@@ -2,8 +2,8 @@ import datetime
 
 import dateutil.parser
 
-from .constants import IllustType, IllustAgeLimit
 from pixiv_pixie.utils import LazyProperty
+from .constants import IllustType, IllustAgeLimit
 
 
 def _lazy(attr_name):

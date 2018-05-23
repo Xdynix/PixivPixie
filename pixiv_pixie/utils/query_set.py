@@ -1,5 +1,5 @@
-from functools import partial, wraps
 import itertools
+from functools import partial, wraps
 
 SEP = '__'
 
