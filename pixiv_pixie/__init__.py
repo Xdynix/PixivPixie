@@ -3,7 +3,7 @@ from .constants import (
     SearchMode, SearchPeriod, SearchOrder
 )
 from .exceptions import (
-    Error, LoginFailed, NoAuth, IllustError, APIError, DownloadError,
+    PixieError, LoginFailed, NoAuth, IllustError, APIError, DownloadError,
 )
 from .illust import PixivIllust
 from .pixie import PixivPixie
@@ -16,7 +16,7 @@ __all__ = (
     'SearchMode',
     'SearchPeriod',
     'SearchOrder',
-    'Error',
+    'PixieError',
     'LoginFailed',
     'NoAuth',
     'IllustError',

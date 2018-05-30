@@ -8,7 +8,7 @@ from concurrent.futures import as_completed
 import dateutil.parser
 
 from .constants import RankingMode, SearchMode, IllustType
-from .exceptions import Error as PixieError
+from .exceptions import PixieError
 from .queen import PixieQueen
 from .utils import with_interval, Q
 from .utils.query_set import query_set

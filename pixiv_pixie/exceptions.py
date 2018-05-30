@@ -1,18 +1,18 @@
-class Error(Exception):
+class PixieError(Exception):
     pass
 
 
-class LoginFailed(Error):
+class LoginFailed(PixieError):
     def __str__(self):
         return 'Login failed! Please check username/password/network.'
 
 
-class NoAuth(Error):
+class NoAuth(PixieError):
     def __str__(self):
         return 'Authentication required. Please call login() first.'
 
 
-class IllustError(Error):
+class IllustError(PixieError):
     def __init__(self, illust_id, message=None):
         if message is None:
             message = 'Illust error.'
@@ -24,7 +24,7 @@ class IllustError(Error):
         return '{} (illust_id: {})'.format(self.message, self.illust_id)
 
 
-class APIError(Error):
+class APIError(PixieError):
     def __init__(self, call_func, errors):
         self.call_func = call_func
         self.errors = errors
@@ -34,7 +34,7 @@ class APIError(Error):
             self.call_func.__name__, self.errors)
 
 
-class DownloadError(Error):
+class DownloadError(PixieError):
     def __init__(self, illust, msg):
         self.illust = illust
         self.msg = msg
