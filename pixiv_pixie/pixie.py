@@ -407,7 +407,9 @@ class PixivPixie:
 
     @classmethod
     def convert_zip_to_gif(
-            cls, input_file, frame_delays=None, output_file=None
+            cls,
+            input_file, frame_delays=None, output_file=None,
+            use_pil=False,
     ):
         """Convert a zip file that contains all frames into gif.
 
@@ -417,6 +419,10 @@ class PixivPixie:
             input_file: The input file. May be str or a file-like object.
             frame_delays: A list of delay durations in microsecond.
             output_file: The output file. May be str or a file-like object.
+            use_pil: Whether to ues Pillow library to create GIF file. By
+                default FreeImage library will be used. FreeImage create better
+                quality and smaller size file, but require external .dll/.so and
+                may crash for unknown reason.
         """
         if frame_delays is None:
             if isinstance(input_file, str):
@@ -443,10 +449,13 @@ class PixivPixie:
                     images.append(imageio.imread(io.BytesIO(input_file.read())))
         frame_delays = [delay / 1000 for delay in frame_delays]
 
-        # GIF-FI format has better quality, but need addition dll
+        if not use_pil:
+            save_format = 'GIF-FI'
+        else:
+            save_format = 'GIF-PIL'
         imageio.mimwrite(
             output_file, images,
-            format='GIF-FI', duration=frame_delays,
+            format=save_format, duration=frame_delays,
         )
         del images
 
@@ -532,6 +541,7 @@ class PixivPixie:
             check_exists,
             max_tries,
             fake_download,
+            use_pil,
     ):
         if not replace and os.path.exists(path):
             return False
@@ -553,7 +563,10 @@ class PixivPixie:
                 buffer.seek(0)
 
                 if illust.type == IllustType.UGOIRA and convert_ugoira:
-                    self.convert_zip_to_gif(buffer, illust.frame_delays, path)
+                    self.convert_zip_to_gif(
+                        buffer, illust.frame_delays, path,
+                        use_pil,
+                    )
                 else:
                     if dir_name:
                         os.makedirs(dir_name, exist_ok=True)
@@ -584,6 +597,7 @@ class PixivPixie:
             check_exists,
             max_tries,
             fake_download,
+            use_pil,
     ):
         result = []
 
@@ -595,6 +609,7 @@ class PixivPixie:
                 check_exists=check_exists,
                 max_tries=max_tries,
                 fake_download=fake_download,
+                use_pil=use_pil,
             )))
 
         return result
@@ -606,6 +621,7 @@ class PixivPixie:
             convert_ugoira=True, replace=False,
             check_exists=None, max_tries=5,
             fake_download=False,
+            use_pil=False,
     ):
         """Download illust.
 
@@ -637,6 +653,8 @@ class PixivPixie:
             max_tries: Max try times when download failed. If max_tries=None, it
                 will loop infinitely until finished.
             fake_download: If True, no file will be actually downloaded.
+            use_pil: Whether to ues Pillow library to create GIF file. Refers to
+                the doc of PixivPixie.convert_zip_to_gif().
 
         Returns:
             A list of download result of each page. Each result is a tuple of
@@ -683,4 +701,5 @@ class PixivPixie:
             check_exists=check_exists,
             max_tries=max_tries,
             fake_download=fake_download,
+            use_pil=use_pil,
         )

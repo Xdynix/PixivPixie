@@ -158,3 +158,7 @@ if __name__ == '__main__':
 The library can be run as a script via `python -m pixiv_pixie`.
 
 Check `-h` for more detail.
+
+## Known Issues
+
+- Use `GIF-FI` format to create GIF file may crash for unknown reason.

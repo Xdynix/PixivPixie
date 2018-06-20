@@ -174,10 +174,15 @@ def get_parser():
     parser.add_argument('--no-convert', action='store_true',
                         help='Do not convert ugoira to GIF file.')
     parser.add_argument('--replace', action='store_true',
-                        help='Replace existed file(s)')
+                        help='Replace existed file(s).')
     parser.add_argument('--check-exists', nargs='*', metavar='PATH',
                         help='Addition path(s) to check whether the illust '
                              'exists (by\nname).')
+    parser.add_argument('--use-pil', action='store_true',
+                        help='Convert ugoira into GIF file with Pillow instead '
+                             'of\nFreeImage. Use this option when crash with '
+                             'FreeImage.')
+
     return parser
 
 
@@ -237,6 +242,7 @@ def get_download_kwargs(args):
         'convert_ugoira': not args.no_convert,
         'replace': args.replace,
         'check_exists': args.check_exists,
+        'use_pil': args.use_pil,
     }
 
 
