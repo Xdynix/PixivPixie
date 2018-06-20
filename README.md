@@ -14,8 +14,8 @@ support [Pixiv Premium](https://www.pixiv.net/premium.php) if you can.
 
 ## About
 
-`PixivPy` is rather a powerful Pixiv API. But its response are raw json and need
-further processing before used. And both `PublicAPI` and `AppAPI` has its pros and
+`PixivPy` is rather a powerful Pixiv API. But its responses are raw json and need
+further processing before being used. And both `PublicAPI` and `AppAPI` has its pros and
 cons.
 
 This package is designed to serve as a proxy API for `PixivPy`. User can just
