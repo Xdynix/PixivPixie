@@ -8,7 +8,7 @@ with open('requirements.txt', 'rt', encoding='utf-8') as f:
 
 setuptools.setup(
     name='PixivPixie',
-    version='0.1.1',
+    version='0.1.2',
     description='User-friendly Pixiv API based on PixivPy',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -24,7 +24,7 @@ setuptools.setup(
     keywords=['pixiv', 'api', 'pixivpy', 'pixiv_pixie'],
     platforms=['any'],
     license='Apache 2.0',
-    packages=setuptools.find_packages(),
+    packages=['pixiv_pixie'],
     install_requires=install_requires,
     python_requires='>=3.4',
 )
