@@ -1,4 +1,3 @@
-imageio>=2.2.0
-requests>=2.18.4
-pixivpy>=3.3.3
-python-dateutil>=2.6.1
+attrs>=19.0.0
+pixivpy>=3.3.0
+requests>=2.0.0

@@ -1,0 +1,10 @@
+{
+  "errors": {
+    "system": {
+      "code": 229,
+      "message": "閲覧制限が取得できませんでした。"
+    }
+  },
+  "has_error": true,
+  "status": "failure"
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "address_id": 0,
+    "background_image_url": null,
+    "birth": "",
+    "birth_day": "",
+    "birth_year": 0,
+    "country_code": "",
+    "gender": "",
+    "is_premium": false,
+    "is_using_custom_profile_image": true,
+    "job": "クリエーター系",
+    "job_id": 5,
+    "pawoo_url": "https://pawoo.net/oauth_authentications/3188698?provider=pixiv",
+    "region": "",
+    "total_follow_users": 280,
+    "total_illust_bookmarks_public": 1942,
+    "total_illust_series": 2,
+    "total_illusts": 157,
+    "total_manga": 49,
+    "total_mypixiv_users": 11,
+    "total_novel_series": 0,
+    "total_novels": 0,
+    "twitter_account": "sikitani_asuka",
+    "twitter_url": "https://twitter.com/sikitani_asuka",
+    "webpage": "http://aoirokanata.wix.com/sikitani"
+  },
+  "profile_publicity": {
+    "birth_day": "public",
+    "birth_year": "public",
+    "gender": "public",
+    "job": "public",
+    "pawoo": true,
+    "region": "public"
+  },
+  "user": {
+    "account": "aoirokanata",
+    "comment": "色谷あすか（しきたにあすか）です。\r\nフリーランスで絵や漫画を描いたり、キャラデザなどもやっています。\r\n\r\n■お仕事は同人・商業問わず有償のみ募集しております。\r\nご連絡はサイトのメールフォームからお願いします。\r\nHP→http://aoirokanata.wix.com/sikitani\r\n　\r\n------------------------------------------------------------\r\n\r\n＜お仕事例＞（敬称略）\r\n・漫画連載中「ブラックベリーだって本当は素直になってみたい！」\r\n・メロンブックス/コミケカタログ特典、グッズイラスト、公式キャラクターデザイン\r\n・KADOKAWA/電撃萌王\r\n・PCゲーム彩色、TVアニメ応援イラスト、スマホゲーム、TCG\r\n\r\n他　詳細はHPにて。\r\n\r\n------------------------------------------------------------\r\n\r\n☆作者名・作品URLの二点ともを載せた引用や作品紹介は許可していますが、転載や加工等は禁止しているのでやめてください。\r\nDon't reprint without my permission.\r\n禁止私自转载、加工\r\n☆無償リクエストは受け付けていません。ご連絡いただいても返信しておりませんのでご了承ください。",
+    "id": 3188698,
+    "is_followed": false,
+    "name": "色谷あすか＠例大祭あ37ab",
+    "profile_image_urls": {
+      "medium": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_170.png"
+    }
+  },
+  "workspace": {
+    "chair": "",
+    "comment": "初めてペンタブ触ったのは2008年の5月くらい。\r\n2011年1月にpixiaからphotoshopへ。",
+    "desk": "",
+    "desktop": "",
+    "monitor": "",
+    "mouse": "",
+    "music": "",
+    "pc": "",
+    "printer": "",
+    "scanner": "",
+    "tablet": "",
+    "tool": "photoshop CS5、CLIPStudioPaint、ComicStudioEX",
+    "workspace_image_url": null
+  }
+}

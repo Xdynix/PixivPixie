@@ -1,0 +1,10 @@
+{
+  "errors": {
+    "system": {
+      "code": null,
+      "message": 404
+    }
+  },
+  "has_error": true,
+  "status": "failure"
+}

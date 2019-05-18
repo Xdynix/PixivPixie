@@ -1,0 +1,29 @@
+{
+  "count": 1,
+  "pagination": {
+    "current": 1,
+    "next": null,
+    "pages": 1,
+    "per_page": 30,
+    "previous": null,
+    "total": 8
+  },
+  "response": [
+    {
+      "account": "rairai-no026-chu",
+      "id": 3414789,
+      "is_follower": null,
+      "is_following": true,
+      "is_friend": null,
+      "is_premium": true,
+      "name": "カフェ",
+      "profile": null,
+      "profile_image_urls": {
+        "px_16x16": "https://i.pximg.net/user-profile/img/2019/02/24/18/15/20/15440408_a80008d53a789e3c0686a2550ec8af59_16.gif",
+        "px_50x50": "https://i.pximg.net/user-profile/img/2019/02/24/18/15/20/15440408_a80008d53a789e3c0686a2550ec8af59_50.gif"
+      },
+      "stats": null
+    }
+  ],
+  "status": "success"
+}
