@@ -24,7 +24,7 @@ further processing before being used. And both `PublicAPI` and `AppAPI` has its 
 cons.
 
 This package is designed to serve as a proxy API for `PixivPy`. User can just
-fetch illusts they want and doesn't need to think about trifles like paging
+fetch illustrations they want and doesn't need to think about trifles like paging
 parameters or response's json structure.
 
 My main motivation is to write a pixiv crawler to download images. So unrelated APIs are not implemented.
