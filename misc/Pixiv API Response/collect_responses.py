@@ -5,7 +5,11 @@ from contextlib import contextmanager
 from pixivpy3 import PixivAPI, AppPixivAPI, PixivError
 from pixivpy3.api import BasePixivAPI
 # noinspection PyUnresolvedReferences, PyPackageRequirements
-from secret import USERNAME, PASSWORD, USERNAME_NO_R18, PASSWORD_NO_R18, REQUEST_KWARGS
+from secret import (
+    USERNAME, PASSWORD,
+    USERNAME_NO_R18, PASSWORD_NO_R18,
+    REQUEST_KWARGS,
+)
 
 ILLUST_ID = 73011378
 ILLUST_MULTI_PAGE_ID = 72922398
@@ -173,7 +177,9 @@ def test_public_api():
     save_json(json_result, 'me_following_works')
 
     while json_result['pagination']['next']:
-        json_result = api.me_following_works(page=json_result['pagination']['next'])
+        json_result = api.me_following_works(
+            page=json_result['pagination']['next'],
+        )
     save_json(json_result, 'me_following_works - last_page')
 
     # ================
@@ -365,13 +371,20 @@ def test_app_api():
     json_result = api.search_illust(QUERY, search_target='exact_match_for_tags')
     save_json(json_result, 'search_illust')
 
-    json_result = api.search_illust(QUERY, search_target='exact_match_for_tags', sort='date_asc')
+    json_result = api.search_illust(
+        QUERY,
+        search_target='exact_match_for_tags',
+        sort='date_asc',
+    )
     save_json(json_result, 'search_illust - asc_order')
 
     json_result = api.search_illust('漫画', search_target='exact_match_for_tags')
     save_json(json_result, 'search_illust - manga')
 
-    json_result = api.search_illust('うごイラ', search_target='exact_match_for_tags')
+    json_result = api.search_illust(
+        'うごイラ',
+        search_target='exact_match_for_tags',
+    )
     save_json(json_result, 'search_illust - ugoira')
 
     # ================
