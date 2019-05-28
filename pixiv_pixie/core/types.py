@@ -134,14 +134,17 @@ class Illust:
     series = attr.ib(default=UNKNOWN, type=Series)
 
     type = attr.ib(default=UNKNOWN, type=Type)
-    age_limit = attr.ib(default=UNKNOWN, type=AgeLimit)  # x_restrict
+    # TODO: Reminder: in app api, it's "x_restrict".
+    age_limit = attr.ib(default=UNKNOWN, type=AgeLimit)
 
     width = attr.ib(default=UNKNOWN, type=int)
     height = attr.ib(default=UNKNOWN, type=int)
 
     page_count = attr.ib(default=UNKNOWN, type=int)
-    image_urls = attr.ib(default=UNKNOWN, type=list)  # in public api, it's "large"
-    # TODO: compute small image url (600x1200_90, 540x540_70, 360x360_70, 128x128, 480x960)
+    # TODO: Reminder: in public api, "origin" is "large"
+    image_urls = attr.ib(default=UNKNOWN, type=list)
+    # TODO: compute small image url
+    #  (600x1200_90, 540x540_70, 360x360_70, 128x128, 480x960)
     frame_delays = attr.ib(default=UNKNOWN, type=list)
     zip_url = attr.ib(default=UNKNOWN, type=str)
 

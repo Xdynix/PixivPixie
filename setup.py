@@ -1,16 +1,18 @@
+"""Build script for PyPI."""
+
 import setuptools
 
 with open('README.md', 'rt', encoding='utf-8') as f:
-    long_description = f.read()
+    LONG_DESCRIPTION = f.read()
 
 with open('requirements.txt', 'rt', encoding='utf-8') as f:
-    install_requires = [line.strip() for line in f]
+    INSTALL_REQUIRES = [line.strip() for line in f]
 
 setuptools.setup(
     name='PixivPixie',
     version='0.1.2',
     description='User-friendly Pixiv API based on PixivPy',
-    long_description=long_description,
+    long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     url='https://github.com/Xdynix/PixivPixie',
     author='Xdynix',
@@ -25,6 +27,6 @@ setuptools.setup(
     platforms=['any'],
     license='Apache 2.0',
     packages=['pixiv_pixie'],
-    install_requires=install_requires,
+    install_requires=INSTALL_REQUIRES,
     python_requires='>=3.4',
 )
