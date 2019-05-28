@@ -1,5 +1,8 @@
 # PixivPixie
 
+**This project is under remaking. If you want to see the previous
+version, please switch to the `master` branch.**
+
 User-friendly Pixiv API based on [PixivPy](https://github.com/upbit/pixivpy)
 
 ## Installation
