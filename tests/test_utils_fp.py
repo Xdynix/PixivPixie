@@ -26,13 +26,13 @@ class TestPartialRight(unittest.TestCase):
         """Test `partial_right` with positional arguments."""
 
         add_123 = partial_right(list.__add__, [1, 2, 3])
-        self.assertEqual(
+        self.assertListEqual(
             add_123([4, 5, 6]),
             [4, 5, 6, 1, 2, 3],
         )
 
         list_456 = partial_right(lambda *args: list(args), 4, 5, 6)
-        self.assertEqual(
+        self.assertListEqual(
             list_456(1, 2, 3),
             [1, 2, 3, 4, 5, 6],
         )
@@ -41,11 +41,11 @@ class TestPartialRight(unittest.TestCase):
         """Test `partial_right` with keyword arguments."""
 
         dict_with_answer = partial_right(dict, answer=42)
-        self.assertEqual(
+        self.assertDictEqual(
             dict_with_answer(when='now'),
             {'when': 'now', 'answer': 42},
         )
-        self.assertEqual(
+        self.assertDictEqual(
             dict_with_answer(answer=0),
             {'answer': 0},
         )
@@ -132,7 +132,10 @@ class TestQ(unittest.TestCase):
 
         # noinspection PyArgumentList
         self.record_1 = Record('John Smith', 85, date(1990, 3, 17))
-        self.record_2 = Record('Jimmy Wang', 97, date(1989, 12, 29), weapon='Sword')
+        self.record_2 = Record(
+            'Jimmy Wang', 97, date(1989, 12, 29),
+            weapon='Sword',
+        )
         self.dict_data = {
             'name': {
                 'first': 'Foo',
@@ -358,8 +361,14 @@ class TestQ(unittest.TestCase):
                     Q(score__lte=score),
                 ]):
                     with self.subTest(i=i):
-                        self.assertEqual(q(self.record_1), self.record_1.score <= score)
-                        self.assertEqual(q(self.record_2), self.record_2.score <= score)
+                        self.assertEqual(
+                            q(self.record_1),
+                            self.record_1.score <= score,
+                        )
+                        self.assertEqual(
+                            q(self.record_2),
+                            self.record_2.score <= score,
+                        )
 
     def test_built_in_gt(self):
         """Test built-in lookup `gt`."""
@@ -378,8 +387,14 @@ class TestQ(unittest.TestCase):
                     Q(score__gte=score),
                 ]):
                     with self.subTest(i=i):
-                        self.assertEqual(q(self.record_1), self.record_1.score >= score)
-                        self.assertEqual(q(self.record_2), self.record_2.score >= score)
+                        self.assertEqual(
+                            q(self.record_1),
+                            self.record_1.score >= score,
+                        )
+                        self.assertEqual(
+                            q(self.record_2),
+                            self.record_2.score >= score,
+                        )
 
     def test_built_in_divisible_by(self):
         """Test built-in lookup `divisible_by`."""
@@ -405,7 +420,10 @@ class TestQ(unittest.TestCase):
                     Q(score__in_range=r),
                 ]):
                     with self.subTest(i=i):
-                        self.assertEqual(q(self.record_1), r[0] <= self.record_1.score <= r[1])
+                        self.assertEqual(
+                            q(self.record_1),
+                            r[0] <= self.record_1.score <= r[1],
+                        )
 
     def test_built_in_isnull(self):
         """Test built-in lookup `isnull` and `is_null`."""
@@ -710,7 +728,8 @@ class TestQuery(unittest.TestCase):
         )
 
         qr = Query(range(100)).sort_by('?')
-        self.assertNotEqual(list(qr), list(range(100)))  # It is almost impossible to be equal.
+        # It is almost impossible to be equal.
+        self.assertNotEqual(list(qr), list(range(100)))
 
     def test_reverse(self):
         """Test `Query.reverse`."""
