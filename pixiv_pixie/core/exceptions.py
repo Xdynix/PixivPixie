@@ -1,8 +1,15 @@
+"""Exception classes."""
+
+
 class Error(Exception):
     """Base exception class."""
-    pass
+
+
+class AuthError(Error):
+    """Errors that occurred during authentication."""
 
 
 __all__ = (
     'Error',
+    'AuthError',
 )
