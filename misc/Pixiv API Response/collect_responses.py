@@ -73,7 +73,7 @@ def test_base_api():
 
     json_result = api.login(USERNAME, PASSWORD)
     json_result['response']['user']['account'] = 'user_abcd1234'
-    json_result['response']['user']['id'] = '99999999'
+    json_result['response']['user']['id'] = 99999999
     json_result['response']['user']['mail_address'] = 'foo@bar.com'
     json_result['response']['user']['name'] = 'Name'
     for key in json_result['response']:
@@ -89,7 +89,7 @@ def test_base_api():
 
     json_result = api.auth()
     json_result['response']['user']['account'] = 'user_abcd1234'
-    json_result['response']['user']['id'] = '99999999'
+    json_result['response']['user']['id'] = 99999999
     json_result['response']['user']['mail_address'] = 'foo@bar.com'
     json_result['response']['user']['name'] = 'Name'
     for key in json_result['response']:

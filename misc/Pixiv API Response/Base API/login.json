@@ -8,7 +8,7 @@
     "token_type": "bearer",
     "user": {
       "account": "user_abcd1234",
-      "id": "99999999",
+      "id": 99999999,
       "is_mail_authorized": true,
       "is_premium": false,
       "mail_address": "foo@bar.com",
