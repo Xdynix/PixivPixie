@@ -1,6 +1,7 @@
 """The Pixiv API interface."""
 
 from datetime import datetime, timedelta
+from threading import RLock
 
 import attr
 from pixivpy3 import PixivAPI, AppPixivAPI
@@ -8,7 +9,7 @@ from pixivpy3 import PixivError as PixivPyError
 from pixivpy3.api import BasePixivAPI
 
 # pylint: disable=relative-beyond-top-level
-from .exceptions import AuthError
+from .exceptions import AuthError, LoginFailed, RefreshTokenFailed
 from .types import User
 
 
@@ -54,6 +55,9 @@ class Session:
 
 
 class PixivPixie:
+    # TODO: Doc.
+    check_auth_delta = 600
+
     def __init__(self, **requests_kwargs):
         self._requests_kwargs = requests_kwargs
         self._session = None
@@ -62,6 +66,7 @@ class PixivPixie:
 
     @property
     def requests_kwargs(self):
+        # TODO: Doc.
         return self._requests_kwargs
 
     @requests_kwargs.setter
@@ -72,31 +77,41 @@ class PixivPixie:
 
     @property
     def session(self):
+        # TODO: Doc.
         return self._session
 
     @session.setter
     def session(self, session):
         self._session = session
         self._papi.set_auth(session.access_token, session.refresh_token)
-        self._papi.user_id = session.user.id  # will not use
+        self._papi.user_id = session.user.id  # will not be used
         self._aapi.set_auth(session.access_token, session.refresh_token)
-        self._aapi.user_id = session.user.id  # will not use
+        self._aapi.user_id = session.user.id  # will not be used
 
     def login(self, username, password):
+        # TODO: Doc.
         try:
             self.session = self._auth(username, password)
         except PixivPyError:
-            raise AuthError('Please check your username and password.')
+            raise LoginFailed('Login failed.')
 
     def refresh_session(self, refresh_token=None):
+        # TODO: Doc.
         if refresh_token is None:
             if self.session is None:
-                raise AuthError('Please provide a refresh token.')
+                raise AuthError('No available session.')
             refresh_token = self.session.refresh_token
         try:
             self.session = self._auth(refresh_token=refresh_token)
         except PixivPyError:
-            raise AuthError('Invalid refresh token.')
+            raise RefreshTokenFailed('Invalid refresh token.')
+
+    def check_auth(self):
+        # TODO: Doc.
+        if self.session is None:
+            raise AuthError('No available session.')
+        if self.session.is_expired(delta=self.check_auth_delta):
+            self.refresh_session()
 
     def _auth(self, username=None, password=None, refresh_token=None):
         """Call PixivPy's `auth()` and parse response to `Session` object. Will
@@ -133,7 +148,35 @@ class PixivPixie:
         )
 
 
+class ThreadSafePixivPixie(PixivPixie):
+    # TODO: Doc
+    def __init__(self, **requests_kwargs):
+        super().__init__(**requests_kwargs)
+        self._session_lock = RLock()
+
+    @PixivPixie.session.setter
+    def session(self, session):
+        with self._session_lock:
+            super(
+                ThreadSafePixivPixie,
+                ThreadSafePixivPixie,
+            ).session.__set__(self, session)
+
+    def login(self, username, password):
+        with self._session_lock:
+            super().login(username, password)
+
+    def refresh_session(self, refresh_token=None):
+        with self._session_lock:
+            super().refresh_session(refresh_token)
+
+    def check_auth(self):
+        with self._session_lock:
+            super().check_auth()
+
+
 __all__ = (
     'Session',
     'PixivPixie',
+    'ThreadSafePixivPixie',
 )
