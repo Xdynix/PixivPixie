@@ -28,7 +28,7 @@ class Session:
     access_token = attr.ib(default='', type=str)
     refresh_token = attr.ib(default='', type=str)
     expires_in = attr.ib(default=3600, type=int)
-    create_date = attr.ib(factory=datetime.now, type=datetime)
+    create_date = attr.ib(factory=datetime.utcnow, type=datetime)
     user = attr.ib(default=None, type=User)
 
     @property
@@ -49,7 +49,8 @@ class Session:
         Returns:
             `True` if expired. `False` otherwise.
         """
-        return datetime.now() >= self.expiration_date - timedelta(seconds=delta)
+        safe_expiration_date = self.expiration_date - timedelta(seconds=delta)
+        return datetime.utcnow() >= safe_expiration_date
 
 
 class PixivPixie:
