@@ -3,52 +3,52 @@
   "pagination": {
     "current": 1,
     "next": 2,
-    "pages": 7,
+    "pages": 8,
     "per_page": 30,
     "previous": null,
-    "total": 206
+    "total": 215
   },
   "response": [
     {
       "age_limit": "all-age",
       "book_style": "none",
-      "caption": "先日は例大祭お疲れ様でした～！！！たくさんの方に来ていただけてとても嬉しかったです(✿´ ꒳ ` )\r\n会場で余部の出たグッズをBOOTH様にて通販しています！＆5/11と12に開催されるネット即売会に参加しています！！\r\n\r\n◆<span style=\"color:#fe3a20;\">注文可能なグッズはこころクッション大＆小/こいし抱き枕/猫クリアコースター/缶バッジ7種</span>になります！全て受注通販ではなく在庫上限があるので、なるべく早くご注文いただくと確実だと思いますー！\r\nhttps://aoirokanata.booth.pm/\r\n\r\n◆<span style=\"color:#fe3a20;\">新刊＋一部のグッズはメロンブックス様に委託</span>していますので是非！\r\nhttps://www.melonbooks.co.jp/circle/index.php?circle_id=23444",
+      "caption": "「いいもんだナ？ ますたあ殿♪」　対のアビーちゃん→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=75470957\r\n\r\n<span style=\"color:#fe3a20;\">夏コミの新刊やグッズ委託中です！</span>\r\n邪ンヌタペストリー＆Tシャツ：https://aoirokanata.booth.pm/items/1496595\r\nFGO新刊：https://www.melonbooks.co.jp/detail/detail.php?product_id=519845 \r\nオリジナル新刊：https://www.melonbooks.co.jp/detail/detail.php?product_id=537758",
       "content_type": null,
-      "created_time": "2019-05-10 19:52:09",
+      "created_time": "2019-08-17 00:02:30",
       "favorite_id": 0,
-      "height": 581,
-      "id": 74659209,
+      "height": 899,
+      "id": 76297018,
       "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/05/10/19/52/09/74659209_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/05/10/19/52/09/74659209_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/05/10/19/52/09/74659209_p0_master1200.jpg"
+        "large": "https://i.pximg.net/img-original/img/2019/08/17/00/02/30/76297018_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/08/17/00/02/30/76297018_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/08/17/00/02/30/76297018_p0_master1200.jpg"
       },
       "is_liked": false,
-      "is_manga": true,
+      "is_manga": false,
       "metadata": null,
-      "page_count": 5,
+      "page_count": 1,
       "publicity": 0,
-      "reuploaded_time": "2019-05-10 19:52:09",
+      "reuploaded_time": "2019-08-17 00:02:30",
       "sanity_level": "white",
       "stats": {
-        "commented_count": 1,
+        "commented_count": 4,
         "favorited_count": {
-          "private": 5,
-          "public": 336
+          "private": 18,
+          "public": 1284
         },
-        "score": 3080,
-        "scored_count": 308,
-        "views_count": 4479
+        "score": 11010,
+        "scored_count": 1101,
+        "views_count": 6106
       },
       "tags": [
-        "東方",
-        "古明地こいし",
-        "フランドール・スカーレット",
-        "秦こころ",
-        "SD",
-        "抱き枕"
+        "Fate/GrandOrder",
+        "FGO",
+        "葛飾北斎(Fate)",
+        "メイド服",
+        "英霊祭装",
+        "Fate/GO1000users入り"
       ],
-      "title": "事後通販のおしらせ",
+      "title": "「めいど服、ってのも」",
       "tools": [
         "PhotoStudio"
       ],
@@ -60,7 +60,814 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 638
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "<span style=\"color:#fe3a20;\">夏コミで頒布した邪ンヌTシャツのXLサイズのみ事後通販します～！</span>\r\nhttps://aoirokanata.booth.pm/items/1418185\r\n\r\n<span style=\"color:#fe3a20;\">初めて通販するタペストリーもあります！！</span>https://aoirokanata.booth.pm/items/1496595\r\n\r\nFGO新刊委託：https://www.melonbooks.co.jp/detail/detail.php?product_id=519845\r\nオリジナル新刊委託：https://www.melonbooks.co.jp/detail/detail.php?product_id=537758",
+      "content_type": null,
+      "created_time": "2019-08-15 00:05:36",
+      "favorite_id": 0,
+      "height": 640,
+      "id": 76259680,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/08/15/00/05/36/76259680_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/08/15/00/05/36/76259680_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/08/15/00/05/36/76259680_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": true,
+      "metadata": null,
+      "page_count": 3,
+      "publicity": 0,
+      "reuploaded_time": "2019-08-15 00:05:36",
+      "sanity_level": "semi_black",
+      "stats": {
+        "commented_count": 3,
+        "favorited_count": {
+          "private": 10,
+          "public": 546
+        },
+        "score": 4790,
+        "scored_count": 479,
+        "views_count": 5434
+      },
+      "tags": [
+        "Fate/GrandOrder",
+        "FGO",
+        "ジャンヌ・オルタ(水着)",
+        "C96",
+        "夏コミ",
+        "剥ぎ取りたいブラ",
+        "Fate/GO500users入り"
+      ],
+      "title": "【事後通販】邪ンヌTシャツ！",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 800
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "<span style=\"color:#fe3a20;\">C96のKADOKAWA様ブースで頒布される「電撃こどものもえおうvol.06」にて看板娘のルリを描かせていただきました！！</span>\r\n全体絵を見ると意味の変わってくるイラストです。是非お手に取ってみてください～！！\r\n詳細→http://moeoh.dengeki.com/archives/11259\r\n\r\n許可いただいたので<span style=\"color:#fe3a20;\">ラフをFANBOX＆Fantiaにて公開予定</span>です(✿´ ꒳ ` )\r\nhttps://fantia.jp/fanclubs/17192\r\nhttps://www.pixiv.net/fanbox/creator/3188698",
+      "content_type": null,
+      "created_time": "2019-08-08 00:21:06",
+      "favorite_id": 0,
+      "height": 533,
+      "id": 76134932,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/08/08/00/21/06/76134932_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/08/08/00/21/06/76134932_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/08/08/00/21/06/76134932_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-08-08 00:21:06",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 9,
+        "favorited_count": {
+          "private": 35,
+          "public": 1585
+        },
+        "score": 12720,
+        "scored_count": 1272,
+        "views_count": 9416
+      },
+      "tags": [
+        "創作",
+        "オリジナル",
+        "女の子",
+        "看板娘",
+        "ルリ",
+        "C96",
+        "オリジナル1000users入り"
+      ],
+      "title": "じっ………",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 700
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "メロンブックス様のR18情報誌、「月刊うりぼうざっか店」にて公式キャラクター：ブラックベリーちゃんの漫画を連載中です！漫画自体は一般向けです！無料で読めますぜひ！！\r\nhttps://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000214563\r\n\r\n<span style=\"color:#fe3a20;\">◆バックナンバー</span>\r\n・1話→http://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000204662\r\n・2話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000207415\r\n・3＆4話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000210694\r\n・5話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000211248\r\n・6話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000211607\r\n・7話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000212861\r\n・8話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000213337",
+      "content_type": null,
+      "created_time": "2019-08-06 23:29:20",
+      "favorite_id": 0,
+      "height": 988,
+      "id": 76115403,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/08/06/23/29/20/76115403_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/08/06/23/29/20/76115403_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/08/06/23/29/20/76115403_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-08-06 23:29:20",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 2,
+        "favorited_count": {
+          "private": 3,
+          "public": 285
+        },
+        "score": 2590,
+        "scored_count": 259,
+        "views_count": 4309
+      },
+      "tags": [
+        "オリジナル",
+        "創作",
+        "漫画",
+        "仕事絵",
+        "ブラックベリーちゃん"
+      ],
+      "title": "【連載マンガ】9話掲載",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 700
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "夏コミで看板娘たちのオリジナルシリアス漫画を出します～！！人の魂を喰べる化物たちは友人の少女を×すのか、どうするのか。B5/36P/500円、<span style=\"color:#8d0000;\">【1日目り27a 蒼色彼方】</span>での頒布です。\r\n<span style=\"color:#fe3a20;\">漫画本通販</span>→https://www.melonbooks.co.jp/detail/detail.php?product_id=537758\r\n<span style=\"color:#fe3a20;\">イラスト本通販</span>→https://www.melonbooks.co.jp/detail/detail.php?product_id=519845\r\n\r\n続きものですが、過去作の無料公開している部分を読めば十分楽しめます！\r\nhttps://twitter.com/i/moments/1155332694139494400?s=13\r\n\r\n1巻→https://www.melonbooks.com/index.php?main_page=maker_affiliate_go&affiliate_id=AF0000029005\r\n2巻→https://www.melonbooks.co.jp/detail/detail.php?product_id=362910\r\n3巻→https://www.melonbooks.co.jp/detail/detail.php?product_id=459961\r\n\r\n<span style=\"color:#8d0000;\">新刊待ちきれない！って方はFANBOXFantiaで前半まるごと掲載しているので是非に</span>\r\nFantia：https://fantia.jp/posts/190748\r\nFANBOX：https://www.pixiv.net/fanbox/creator/3188698/post/490716",
+      "content_type": null,
+      "created_time": "2019-08-02 00:13:43",
+      "favorite_id": 0,
+      "height": 918,
+      "id": 76027302,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/08/02/00/13/43/76027302_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/08/02/00/13/43/76027302_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/08/02/00/13/43/76027302_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": true,
+      "metadata": null,
+      "page_count": 13,
+      "publicity": 0,
+      "reuploaded_time": "2019-08-02 00:13:43",
+      "sanity_level": "semi_black",
+      "stats": {
+        "commented_count": 1,
+        "favorited_count": {
+          "private": 18,
+          "public": 609
+        },
+        "score": 5530,
+        "scored_count": 553,
+        "views_count": 8405
+      },
+      "tags": [
+        "漫画",
+        "オリジナル",
+        "創作",
+        "看板娘",
+        "C96",
+        "夏コミ",
+        "うちの子",
+        "オリジナル500users入り"
+      ],
+      "title": "【C96】漫画本サンプル",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "manga",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 650
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "夏コミで初のFGO+Fateイラスト本を出します～！！光をテーマにしたイラストを収録しました。初めて描いた子の描きおろしイラストもあります！！B5/フルカラー20P/500円、<span style=\"color:#8d0000;\">【1日目り27a 蒼色彼方】</span>での頒布です。\r\n<span style=\"color:#fe3a20;\">イラスト本通販</span>→https://www.melonbooks.co.jp/detail/detail.php?product_id=519845\r\n<span style=\"color:#fe3a20;\">漫画本通販</span>→https://www.melonbooks.co.jp/detail/detail.php?product_id=537758\r\n\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14517805\r\n◆twitter：https://twitter.com/sikitani_asuka",
+      "content_type": null,
+      "created_time": "2019-08-01 00:24:36",
+      "favorite_id": 0,
+      "height": 890,
+      "id": 76010324,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/08/01/00/24/36/76010324_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/08/01/00/24/36/76010324_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/08/01/00/24/36/76010324_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": true,
+      "metadata": null,
+      "page_count": 5,
+      "publicity": 0,
+      "reuploaded_time": "2019-08-01 00:24:36",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 5,
+        "favorited_count": {
+          "private": 72,
+          "public": 2813
+        },
+        "score": 21350,
+        "scored_count": 2135,
+        "views_count": 23217
+      },
+      "tags": [
+        "Fate/GrandOrder",
+        "FGO",
+        "イリヤスフィール・フォン・アインツベルン",
+        "プリズマ☆イリヤ",
+        "カーマ(Fate)",
+        "間桐桜",
+        "Fate/staynight",
+        "C96",
+        "Fate/GO1000users入り",
+        "プリズマ☆イリヤ1000users入り"
+      ],
+      "title": "【C96】イラスト本サンプル",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 630
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "夏コミ新刊のオリジナル漫画本の表紙です～！！執事とお嬢様なイメージです。\r\n<span style=\"color:#fe3a20;\">漫画本通販</span>→https://www.melonbooks.co.jp/detail/detail.php?product_id=537758\r\n<span style=\"color:#fe3a20;\">FGOイラスト本通販</span>→https://www.melonbooks.co.jp/detail/detail.php?product_id=519845\r\n\r\n<span style=\"color:#fe3a20;\">【トリミングなし高画質版】</span>\r\nFantia：https://fantia.jp/posts/188269\r\nFANBOX：https://www.pixiv.net/fanbox/creator/3188698/post/484155\r\n\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14517805\r\n◆twitter：https://twitter.com/sikitani_asuka",
+      "content_type": null,
+      "created_time": "2019-07-31 00:22:17",
+      "favorite_id": 0,
+      "height": 899,
+      "id": 75993532,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/07/31/00/22/17/75993532_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/07/31/00/22/17/75993532_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/07/31/00/22/17/75993532_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-07-31 00:22:17",
+      "sanity_level": "semi_black",
+      "stats": {
+        "commented_count": 8,
+        "favorited_count": {
+          "private": 21,
+          "public": 1091
+        },
+        "score": 9250,
+        "scored_count": 925,
+        "views_count": 8411
+      },
+      "tags": [
+        "オリジナル",
+        "創作",
+        "夏コミ",
+        "C96",
+        "創作男女",
+        "看板娘",
+        "オリジナル500users入り",
+        "オリジナル1000users入り"
+      ],
+      "title": "Ephemeral🌸",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 631
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "サバフェス復刻ありがとうイラストです！！めちゃくちゃ楽しみにしてました…\r\n夏コミではフルグラTシャツになったりこのイラストの別verがタペストリーになったりします。\r\n<span style=\"color:#fe3a20;\">夏コミ新刊予約始まってます</span>→https://www.melonbooks.co.jp/detail/detail.php?product_id=519845\r\n\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14517805\r\n◆twitter：https://twitter.com/sikitani_asuka",
+      "content_type": null,
+      "created_time": "2019-07-18 00:11:30",
+      "favorite_id": 0,
+      "height": 897,
+      "id": 75778386,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/07/18/00/11/30/75778386_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/07/18/00/11/30/75778386_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/07/18/00/11/30/75778386_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-07-18 00:11:30",
+      "sanity_level": "semi_black",
+      "stats": {
+        "commented_count": 7,
+        "favorited_count": {
+          "private": 71,
+          "public": 2436
+        },
+        "score": 17630,
+        "scored_count": 1763,
+        "views_count": 13439
+      },
+      "tags": [
+        "FGO",
+        "Fate/GrandOrder",
+        "ジャンヌ・オルタ(水着)",
+        "サーヴァント・サマー・フェスティバル!",
+        "C96",
+        "夏コミ",
+        "ジャンヌ・オルタ",
+        "Fate/GO1000users入り"
+      ],
+      "title": "水着邪ンヌ！",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 615
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "過去に出したオリジナル本、「シロツメクサの罪人」の電子書籍版を配信開始しました！よろしくお願いします。\r\n\r\n<span style=\"color:#8d0000;\">★DL版</span>\r\n・DLsite→https://www.dlsite.com/home/dlaf/=/link/work/aid/aoiro/id/RJ254785.html\r\n・DMM→https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_155538/aokana-001\r\n<span style=\"color:#8d0000;\">★製本版</span>\r\n・メロンブックス→https://www.melonbooks.co.jp/detail/detail.php?product_id=459961\r\n\r\n<span style=\"color:#fe3a20;\">同じシリーズのオリジナル漫画1作目無料公開中</span>です！→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72184946\r\n2作目→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=74990722",
+      "content_type": null,
+      "created_time": "2019-07-13 19:12:29",
+      "favorite_id": 0,
+      "height": 988,
+      "id": 75700585,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/07/13/19/12/29/75700585_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/07/13/19/12/29/75700585_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/07/13/19/12/29/75700585_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": true,
+      "metadata": null,
+      "page_count": 13,
+      "publicity": 0,
+      "reuploaded_time": "2019-07-13 19:12:29",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 4,
+        "favorited_count": {
+          "private": 16,
+          "public": 777
+        },
+        "score": 6760,
+        "scored_count": 676,
+        "views_count": 13921
+      },
+      "tags": [
+        "漫画",
+        "創作男女",
+        "オリジナル",
+        "ルリ",
+        "看板娘",
+        "うちの子",
+        "オリジナル500users入り",
+        "創作男女500users入り",
+        "青年幼女"
+      ],
+      "title": "【電子版】創作シリアス漫画",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "manga",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 700
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "看板娘のルリ！夏コミでクリアファイルホルダーになるイラストです～！\r\n売り子さんもこのお洋服でルリのコスプレしてくださいます…楽しみ！！\r\n\r\n<span style=\"color:#fe3a20;\">【高画質版】</span>\r\nFantia：https://fantia.jp/posts/180727 \r\nFANBOX：https://www.pixiv.net/fanbox/creator/3188698/post/459866\r\n\r\n◆twitter：https://twitter.com/sikitani_asuka\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14517805\r\n◆本委託：https://www.melonbooks.co.jp/circle/index.php?circle_id=23444",
+      "content_type": null,
+      "created_time": "2019-07-10 00:25:01",
+      "favorite_id": 0,
+      "height": 639,
+      "id": 75641217,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/07/10/00/25/01/75641217_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/07/10/00/25/01/75641217_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/07/10/00/25/01/75641217_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-07-10 00:25:01",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 13,
+        "favorited_count": {
+          "private": 102,
+          "public": 4510
+        },
+        "score": 32630,
+        "scored_count": 3263,
+        "views_count": 24346
+      },
+      "tags": [
+        "オリジナル",
+        "看板娘",
+        "夏コミ",
+        "C96",
+        "創作",
+        "魅惑のふともも",
+        "金髪ロング",
+        "セーラーワンピース",
+        "横臥",
+        "オリジナル3000users入り"
+      ],
+      "title": "キミと海",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 886
+    },
+    {
+      "age_limit": "r18",
+      "book_style": "none",
+      "caption": "<span style=\"color:#fe3a20;\">【7月限定公開】FANBOXとFantiaにてメイドご奉仕本、「ご奉仕ならメイドにおまかせ！」の修正薄い版PDFを公開中です！よろしくお願いします</span>\r\n◆FANBOX→https://www.pixiv.net/fanbox/creator/3188698/post/449991\r\n◆Fantia→https://fantia.jp/posts/177819\r\n\r\n<span style=\"color:#fe3a20;\">☆通販</span>\r\nメロンブックスさん→https://www.melonbooks.co.jp/circle/index.php?circle_id=23444\r\nとらのあなさん→https://ec.toranoana.jp/tora_r/ec/cot/circle/2UPAD26P877NdC68d687/all/\r\nグッズ類→https://aoirokanata.booth.pm/\r\n\r\n<span style=\"color:#fe3a20;\">サンプルは初版時のものを流用しているので、FANBOXFantia版とは修正が異なります。</span>\r\n画像間違えたので再投稿すみません；；",
+      "content_type": null,
+      "created_time": "2019-07-06 09:37:58",
+      "favorite_id": 0,
+      "height": 909,
+      "id": 75573929,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/07/06/09/37/58/75573929_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/07/06/09/37/58/75573929_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/07/06/09/37/58/75573929_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": true,
+      "metadata": null,
+      "page_count": 7,
+      "publicity": 0,
+      "reuploaded_time": "2019-07-06 09:37:58",
+      "sanity_level": "black",
+      "stats": {
+        "commented_count": 8,
+        "favorited_count": {
+          "private": 205,
+          "public": 1408
+        },
+        "score": 11540,
+        "scored_count": 1154,
+        "views_count": 25036
+      },
+      "tags": [
+        "R-18",
+        "東方",
+        "古明地こいし",
+        "メイド",
+        "パイズリ",
+        "フェラ",
+        "タイツ",
+        "東方Project1000users入り",
+        "こいちち"
+      ],
+      "title": "【7月限定】メイドこいし本",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 650
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "フェス衣装アビーちゃんらくがき！！\r\n<span style=\"color:#fe3a20;\">◆夏コミ新刊FGO本の予約が始まってます！</span>\r\nhttps://www.melonbooks.co.jp/detail/detail.php?product_id=519845\r\n\r\nwebカタログ：https://webcatalog-free.circle.ms/Circle/14517805\r\ntwitter：https://twitter.com/sikitani_asuka",
+      "content_type": null,
+      "created_time": "2019-06-30 00:11:52",
+      "favorite_id": 0,
+      "height": 895,
+      "id": 75470957,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/06/30/00/11/52/75470957_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/06/30/00/11/52/75470957_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/06/30/00/11/52/75470957_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-06-30 00:11:52",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 16,
+        "favorited_count": {
+          "private": 82,
+          "public": 3835
+        },
+        "score": 27990,
+        "scored_count": 2799,
+        "views_count": 22079
+      },
+      "tags": [
+        "アビゲイル・ウィリアムズ(Fate)",
+        "FGO",
+        "Fate/GrandOrder",
+        "落書き",
+        "Fate/GO1000users入り",
+        "FGOフェス"
+      ],
+      "title": "「似合うかしら？マスター…♡」",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 640
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "<span style=\"color:#fe3a20;\">◆夏コミ新刊、FGOイラスト本の予約が始まりました！</span>\r\nhttps://www.melonbooks.co.jp/detail/detail.php?product_id=519845\r\n\r\nテスタメントイリヤの可愛さ半端ないですね…いつか美遊もクロも描きたい…",
+      "content_type": null,
+      "created_time": "2019-06-25 00:04:13",
+      "favorite_id": 0,
+      "height": 979,
+      "id": 75393461,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/06/25/00/04/13/75393461_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/06/25/00/04/13/75393461_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/06/25/00/04/13/75393461_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-06-25 00:04:13",
+      "sanity_level": "semi_black",
+      "stats": {
+        "commented_count": 20,
+        "favorited_count": {
+          "private": 260,
+          "public": 6725
+        },
+        "score": 46490,
+        "scored_count": 4649,
+        "views_count": 36087
+      },
+      "tags": [
+        "イリヤスフィール・フォン・アインツベルン",
+        "プリズマ☆イリヤ",
+        "Fate/GrandOrder",
+        "FGO",
+        "C96",
+        "テスタメント",
+        "プリズマ☆イリヤ5000users入り",
+        "Fate/GO5000users入り",
+        "テスタメント(Fate)"
+      ],
+      "title": "小悪魔な魔法少女",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 700
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "イラスト（https://www.pixiv.net/member_illust.php?mode=medium&illust_id=75108647）の過程まとめました！\r\n<span style=\"color:#fe3a20;\">タペストリーを期間限定で受注通販しています！</span>\r\n・BOOTH→https://aoirokanata.booth.pm/items/1418167\r\n・メロンブックス→https://www.melonbooks.co.jp/detail/detail.php?product_id=519941\r\n\r\nメロンさんは手数料の関係で少しお高くなってます。",
+      "content_type": null,
+      "created_time": "2019-06-24 13:49:24",
+      "favorite_id": 0,
+      "height": 839,
+      "id": 75384787,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/06/24/13/49/24/75384787_ugoira0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/06/24/13/49/24/75384787_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/06/24/13/49/24/75384787_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-06-24 13:49:24",
+      "sanity_level": "semi_black",
+      "stats": {
+        "commented_count": 5,
+        "favorited_count": {
+          "private": 60,
+          "public": 1493
+        },
+        "score": 11110,
+        "scored_count": 1111,
+        "views_count": 19999
+      },
+      "tags": [
+        "うごイラ",
+        "オリジナル",
+        "創作",
+        "メイキング",
+        "女子高生",
+        "黒タイツ",
+        "タイツ越しのパンツ",
+        "オリジナル500users入り",
+        "パンスト越しのパンツ"
+      ],
+      "title": "メイキング7",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "ugoira",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -72,103 +879,47 @@
     {
       "age_limit": "all-age",
       "book_style": "none",
-      "caption": "スペースは<span style=\"color:#fe3a20;\">【あ37ab　蒼色彼方】</span>です！\r\n当日のお願いをよくお読みの上お越しいただけると助かります(*'ω'*)　よろしくお願いします！\r\n\r\n<span style=\"color:#fe3a20;\">☆サンプル一覧</span>　　 ↑new　↓old\r\n・<span style=\"color:#fe3a20;\">新刊</span>「無意識の底にて」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=74292429\r\n・<span style=\"color:#fe3a20;\">再販</span>「総集編　蒼の世界へ」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=74184028\r\n・準新刊「発情期のにゃんこいし」（R18）→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72127889\r\n・「猫フランと飼い主こいし3」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=71119798\r\n・「猫フランと飼い主こいし2」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=65379176\r\n・「猫フランと飼い主こいし」→http://www.pixiv.net/member_illust.php?mode=medium&illust_id=60478851\r\n・「さよなら、貌亡き親友」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=68371511\r\n＜イラスト本＞\r\n・「こいしとフランを愛でる本」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=68351434\r\n・「蒼色スケッチ　2.5さつめ」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=63173647\r\n・「ふぇいばりっとガールズ2」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=65324226\r\n＜オリジナル漫画＞\r\n・準新刊「シロツメクサの罪人」（オリジナル）→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72291046\r\n・「愛を識らない花々」→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=68492397\r\n\r\n　\r\n<span style=\"color:#fe3a20;\">☆当日のお願い</span>\r\n・混雑解消のため、新刊はセットを優先して頒布します。\r\n・スペースを離れたあとのセット不足品・交換については対応できません。必ずその場でのご確認をお願い致します。\r\n・R18本は身分証のご提示をお願いすることがあります。ご提示いただけない場合頒布はしませんのでご注意ください。\r\n\r\n<span style=\"color:#fe3a20;\">☆こころクッションについて</span>\r\n印刷所様との確認ミスにより等身大サイズ（当初の予定サイズ）とすごく大きいサイズ（予想外）の二種類が生まれました…二つセットだとお安くしてます。サイズ比較はこちら（https://twitter.com/sikitani_asuka/status/1121712846465687552）\r\n売り子さんに「大きいこころちゃん」か「小さいこころちゃん」どちらが欲しいか仰っていただけると有難いです。\r\n\r\n<span style=\"color:#fe3a20;\">☆通販</span>\r\nメロンブックスさん→https://www.melonbooks.co.jp/circle/index.php?circle_id=23444\r\nとらのあなさん→https://ec.toranoana.jp/tora_r/ec/cot/circle/2UPAD26P877NdC68d687/all/\r\nグッズ類→https://aoirokanata.booth.pm/\r\n\r\n<span style=\"color:#fe3a20;\">☆プレゼント企画・スケブについて</span>\r\nFANBOXのご支援者の方向けに缶バッジやポスターのプレゼントがあります。詳細→https://www.pixiv.net/fanbox/creator/3188698/post/363724\r\nスケブはお受けしておりませんが、FANBOXご支援者様には一発描きチャレンジ実施します。\r\n\r\n当日の様子はtwitter（https://twitter.com/sikitani_asuka）でできる限り呟こうと思います！\r\nスペース離れるときと完売した時はなるべく呟くようにしますので、御用のある方などは参考にお願いします～。\r\n\r\nではよろしくお願いします！！",
+      "caption": "看板娘の優ちゃんです( ˘ω˘ )　お着替え中ということで…( ˘ω˘ )\r\n<span style=\"color:#fe3a20;\">夏コミ受かりました！</span>この子も新刊で登場します！！\r\nwebカタログ：https://webcatalog-free.circle.ms/Circle/14517805\r\n\r\n<span style=\"color:#fe3a20;\">＜高画質版＆差分＞</span>\r\nFANBOX→https://www.pixiv.net/fanbox/creator/3188698/post/408591\r\n18歳未満の方はFantiaで→https://fantia.jp/posts/165078\r\n\r\n◆twitter：https://twitter.com/sikitani_asuka\r\n◆本委託：https://www.melonbooks.co.jp/circle/index.php?circle_id=23444\r\n◆グッズ委託；https://aoirokanata.booth.pm/",
       "content_type": null,
-      "created_time": "2019-04-26 21:58:43",
+      "created_time": "2019-06-08 00:05:48",
       "favorite_id": 0,
-      "height": 1132,
-      "id": 74390817,
+      "height": 979,
+      "id": 75108647,
       "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/04/26/21/58/43/74390817_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/04/26/21/58/43/74390817_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/04/26/21/58/43/74390817_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": true,
-      "metadata": null,
-      "page_count": 2,
-      "publicity": 0,
-      "reuploaded_time": "2019-04-26 21:58:43",
-      "sanity_level": "semi_black",
-      "stats": {
-        "commented_count": 0,
-        "favorited_count": {
-          "private": 7,
-          "public": 213
-        },
-        "score": 2160,
-        "scored_count": 216,
-        "views_count": 8718
-      },
-      "tags": [
-        "東方",
-        "古明地こいし",
-        "フランドール・スカーレット",
-        "秦こころ",
-        "例大祭16",
-        "お品書き"
-      ],
-      "title": "【例大祭】お品書き",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 1600
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "<span style=\"color:#fe3a20;\">例大祭で抱き枕カバーを出します！！！</span>\r\n表は押し倒した時の驚いたこいしちゃん、裏は優しく受け入れてくれるこいしちゃんをイメージしました！\r\n是非柔らかこいしちゃんを抱きしめてあげてください。よろしくお願いします！\r\n\r\n<span style=\"color:#fe3a20;\">◆通販→https://aoirokanata.booth.pm/items/1266615</span>",
-      "content_type": null,
-      "created_time": "2019-04-25 00:01:25",
-      "favorite_id": 0,
-      "height": 924,
-      "id": 74363781,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/04/25/00/01/25/74363781_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/04/25/00/01/25/74363781_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/04/25/00/01/25/74363781_p0_master1200.jpg"
+        "large": "https://i.pximg.net/img-original/img/2019/06/08/00/05/48/75108647_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/06/08/00/05/48/75108647_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/06/08/00/05/48/75108647_p0_master1200.jpg"
       },
       "is_liked": false,
       "is_manga": false,
       "metadata": null,
       "page_count": 1,
       "publicity": 0,
-      "reuploaded_time": "2019-04-25 00:01:25",
+      "reuploaded_time": "2019-06-08 00:05:48",
       "sanity_level": "semi_black",
       "stats": {
-        "commented_count": 3,
+        "commented_count": 14,
         "favorited_count": {
-          "private": 35,
-          "public": 602
+          "private": 247,
+          "public": 4333
         },
-        "score": 4990,
-        "scored_count": 499,
-        "views_count": 6616
+        "score": 29230,
+        "scored_count": 2923,
+        "views_count": 24815
       },
       "tags": [
-        "東方",
-        "古明地こいし",
-        "例大祭16",
-        "抱き枕カバー",
+        "年下彼女3",
+        "オリジナル",
+        "看板娘",
+        "黒タイツ",
         "タイツ越しのパンツ",
-        "裾上げタイツ脱ぎ"
+        "女子高生",
+        "魅惑のふともも",
+        "制服",
+        "半脱ぎ",
+        "オリジナル3000users入り"
       ],
-      "title": "こいしちゃん抱き枕カバー",
+      "title": "「………///」",
       "tools": [
         "PhotoStudio"
       ],
@@ -180,14 +931,257 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
         },
         "stats": null
       },
-      "width": 1000
+      "width": 700
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "過去に出したオリジナル本、「愛を識らない花々」の電子書籍版を配信開始しました！よろしくお願いします。\r\n<span style=\"color:#8d0000;\">★DL版</span>\r\n・DLsite→https://www.dlsite.com/home/dlaf/=/link/work/aid/aoiro/id/RJ247437.html\r\n・DMM→https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_150222/aokana-001\r\n<span style=\"color:#8d0000;\">★製本版</span>\r\n・メロンブックス→https://www.melonbooks.co.jp/detail/detail.php?product_id=362911\r\n\r\n<span style=\"color:#fe3a20;\">同じシリーズのオリジナル漫画1作目無料公開中</span>です！→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72184946\r\n3作目→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72291046",
+      "content_type": null,
+      "created_time": "2019-05-31 19:45:16",
+      "favorite_id": 0,
+      "height": 420,
+      "id": 74990722,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/05/31/19/45/16/74990722_p0.jpg",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/05/31/19/45/16/74990722_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/05/31/19/45/16/74990722_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": true,
+      "metadata": null,
+      "page_count": 9,
+      "publicity": 0,
+      "reuploaded_time": "2019-05-31 19:45:16",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 2,
+        "favorited_count": {
+          "private": 9,
+          "public": 467
+        },
+        "score": 4390,
+        "scored_count": 439,
+        "views_count": 9110
+      },
+      "tags": [
+        "漫画",
+        "創作男女",
+        "オリジナル",
+        "看板娘",
+        "うちの子",
+        "ルリ"
+      ],
+      "title": "【電子版】オリジナル漫画",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "manga",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 560
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "最近暑いしお祝いする絵も描きたいな～やっぱりFateはアルトリア！ということで水着アルトリアです！水着でテンション上がる王が好きです…KAWAII…\r\n◆twitter：https://twitter.com/sikitani_asuka",
+      "content_type": null,
+      "created_time": "2019-05-26 18:10:47",
+      "favorite_id": 0,
+      "height": 912,
+      "id": 74915020,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/05/26/18/10/47/74915020_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/05/26/18/10/47/74915020_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/05/26/18/10/47/74915020_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-05-26 18:10:47",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 6,
+        "favorited_count": {
+          "private": 20,
+          "public": 1127
+        },
+        "score": 9230,
+        "scored_count": 923,
+        "views_count": 8825
+      },
+      "tags": [
+        "FGOイラコン3_SD",
+        "FGOイラコン3_FES",
+        "Fate/GrandOrder",
+        "FGO",
+        "アルトリア・ペンドラゴン",
+        "アルトリア・ペンドラゴン(水着)",
+        "Fate/GO1000users入り"
+      ],
+      "title": "お祝いSD水着王！",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 650
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "次に会うときは、もうちょっと練習してくるわ。\r\n\r\n◆新宿でのダンスシーンが好きすぎたので描きました！鳴鳳荘PUで来てくれてそのままアガルタでのフェニクス相手に活躍してくれて邪ンヌ好きの気持ちが強まる…。サバフェス復刻は宝具5目指してがんばります！水着楽しみ！！！！\r\n◆twitter：https://twitter.com/sikitani_asuka",
+      "content_type": null,
+      "created_time": "2019-05-25 00:20:34",
+      "favorite_id": 0,
+      "height": 800,
+      "id": 74886159,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/05/25/00/20/34/74886159_p0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/05/25/00/20/34/74886159_p0_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/05/25/00/20/34/74886159_p0_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-05-25 00:20:34",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 8,
+        "favorited_count": {
+          "private": 103,
+          "public": 4223
+        },
+        "score": 28160,
+        "scored_count": 2816,
+        "views_count": 26157
+      },
+      "tags": [
+        "FGOイラコン3",
+        "Fate/GrandOrder",
+        "ジャンヌ・オルタ",
+        "FGO",
+        "悪性隔絶魔境新宿",
+        "Fate/GO1000users入り",
+        "銀髪",
+        "長手袋"
+      ],
+      "title": "それじゃあ、さようなら。",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "illustration",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 1125
+    },
+    {
+      "age_limit": "all-age",
+      "book_style": "none",
+      "caption": "こちらのイラスト（https://www.pixiv.net/member_illust.php?mode=medium&illust_id=73907300）の過程まとめました！\r\n\r\n◆twitter：https://twitter.com/sikitani_asuka\r\n◆メロン委託：https://www.melonbooks.co.jp/circle/index.php?circle_id=23444\r\n◆グッズ委託；https://aoirokanata.booth.pm/",
+      "content_type": null,
+      "created_time": "2019-05-24 00:18:47",
+      "favorite_id": 0,
+      "height": 650,
+      "id": 74871124,
+      "image_urls": {
+        "large": "https://i.pximg.net/img-original/img/2019/05/24/00/18/47/74871124_ugoira0.png",
+        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/05/24/00/18/47/74871124_square1200.jpg",
+        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/05/24/00/18/47/74871124_master1200.jpg"
+      },
+      "is_liked": false,
+      "is_manga": false,
+      "metadata": null,
+      "page_count": 1,
+      "publicity": 0,
+      "reuploaded_time": "2019-05-24 00:18:47",
+      "sanity_level": "white",
+      "stats": {
+        "commented_count": 5,
+        "favorited_count": {
+          "private": 40,
+          "public": 1403
+        },
+        "score": 10400,
+        "scored_count": 1040,
+        "views_count": 23372
+      },
+      "tags": [
+        "うごイラ",
+        "カーマ(Fate)",
+        "Fate/GrandOrder",
+        "FGO",
+        "メイキング",
+        "Fate/GO1000users入り"
+      ],
+      "title": "メイキング6",
+      "tools": [
+        "PhotoStudio"
+      ],
+      "type": "ugoira",
+      "user": {
+        "account": "aoirokanata",
+        "id": 3188698,
+        "is_follower": false,
+        "is_following": false,
+        "is_friend": false,
+        "is_premium": null,
+        "name": "色谷あすか＠一日目西り27a",
+        "profile": null,
+        "profile_image_urls": {
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
+        },
+        "stats": null
+      },
+      "width": 1156
     },
     {
       "age_limit": "all-age",
@@ -213,12 +1207,12 @@
       "stats": {
         "commented_count": 6,
         "favorited_count": {
-          "private": 29,
-          "public": 957
+          "private": 36,
+          "public": 1151
         },
-        "score": 8230,
-        "scored_count": 823,
-        "views_count": 13861
+        "score": 9300,
+        "scored_count": 930,
+        "views_count": 21381
       },
       "tags": [
         "漫画",
@@ -243,7 +1237,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -274,14 +1268,14 @@
       "reuploaded_time": "2019-04-19 00:14:25",
       "sanity_level": "semi_black",
       "stats": {
-        "commented_count": 4,
+        "commented_count": 5,
         "favorited_count": {
-          "private": 29,
-          "public": 774
+          "private": 36,
+          "public": 934
         },
-        "score": 6750,
-        "scored_count": 675,
-        "views_count": 7151
+        "score": 7640,
+        "scored_count": 764,
+        "views_count": 9699
       },
       "tags": [
         "仕事絵",
@@ -304,7 +1298,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -312,69 +1306,6 @@
         "stats": null
       },
       "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "例大祭で頒布予定のこいしちゃん抱き枕イラスト（ウラ面）です！全てにこだわりました！！\r\n\r\n<span style=\"color:#fe3a20;\">◆新刊の書店予約始まっています！</span>\r\nhttps://www.melonbooks.co.jp/circle/index.php?circle_id=23444\r\n\r\n<span style=\"color:#fe3a20;\">◆通販→https://aoirokanata.booth.pm/items/1266615</span>",
-      "content_type": null,
-      "created_time": "2019-04-16 00:08:42",
-      "favorite_id": 0,
-      "height": 698,
-      "id": 74223801,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/04/16/00/08/42/74223801_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/04/16/00/08/42/74223801_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/04/16/00/08/42/74223801_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": true,
-      "metadata": null,
-      "page_count": 3,
-      "publicity": 0,
-      "reuploaded_time": "2019-04-16 00:08:42",
-      "sanity_level": "semi_black",
-      "stats": {
-        "commented_count": 9,
-        "favorited_count": {
-          "private": 166,
-          "public": 2366
-        },
-        "score": 16340,
-        "scored_count": 1634,
-        "views_count": 23605
-      },
-      "tags": [
-        "東方",
-        "古明地こいし",
-        "例大祭16",
-        "東方Project",
-        "輪チラ",
-        "東方Project1000users入り",
-        "こいちち",
-        "タイツ越しのパンツ",
-        "裾上げタイツ脱ぎ"
-      ],
-      "title": "「いいよ…きて…❤」",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 550
     },
     {
       "age_limit": "all-age",
@@ -400,12 +1331,12 @@
       "stats": {
         "commented_count": 4,
         "favorited_count": {
-          "private": 20,
-          "public": 751
+          "private": 23,
+          "public": 862
         },
-        "score": 6600,
-        "scored_count": 660,
-        "views_count": 11814
+        "score": 7240,
+        "scored_count": 724,
+        "views_count": 16446
       },
       "tags": [
         "漫画",
@@ -430,7 +1361,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -463,12 +1394,12 @@
       "stats": {
         "commented_count": 10,
         "favorited_count": {
-          "private": 75,
-          "public": 2502
+          "private": 89,
+          "public": 3102
         },
-        "score": 19670,
-        "scored_count": 1967,
-        "views_count": 16095
+        "score": 23620,
+        "scored_count": 2362,
+        "views_count": 22982
       },
       "tags": [
         "東方",
@@ -494,7 +1425,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -502,125 +1433,6 @@
         "stats": null
       },
       "width": 750
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "メロンブックス様のR18情報誌、「月刊うりぼうざっか店」にてブラックベリーちゃんの漫画を連載中です！漫画自体は一般向けです！無料で読めますぜひ！！\r\nhttps://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000211607\r\n\r\n<span style=\"color:#fe3a20;\">◆バックナンバー</span>\r\n・1話→http://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000204662\r\n・2話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000207415\r\n・3＆4話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000210694\r\n・5話→https://www.melonbooks.com/index.php?main_page=product_info&products_id=IT0000211248",
-      "content_type": null,
-      "created_time": "2019-04-03 22:10:56",
-      "favorite_id": 0,
-      "height": 988,
-      "id": 74028167,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/04/03/22/10/56/74028167_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/04/03/22/10/56/74028167_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/04/03/22/10/56/74028167_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2019-04-03 22:10:56",
-      "sanity_level": "white",
-      "stats": {
-        "commented_count": 1,
-        "favorited_count": {
-          "private": 8,
-          "public": 361
-        },
-        "score": 3550,
-        "scored_count": 355,
-        "views_count": 8443
-      },
-      "tags": [
-        "創作",
-        "ブラックベリーちゃん",
-        "オリジナル",
-        "仕事絵",
-        "漫画"
-      ],
-      "title": "【連載マンガ】6話掲載",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "看板娘たちがtwitterを始めたみたいです！→https://twitter.com/yuu_kiginu　https://twitter.com/ruli_nagaru　https://twitter.com/ntt_rsk\r\nスタイリングとかお手伝いしました(✿´ ꒳ ` )　何枚か写真も撮りたいらしいのでぜひ一日中見てみてください！！",
-      "content_type": null,
-      "created_time": "2019-04-01 09:23:10",
-      "favorite_id": 0,
-      "height": 933,
-      "id": 73987706,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/04/01/09/23/10/73987706_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/04/01/09/23/10/73987706_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/04/01/09/23/10/73987706_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2019-04-01 09:23:10",
-      "sanity_level": "semi_black",
-      "stats": {
-        "commented_count": 3,
-        "favorited_count": {
-          "private": 14,
-          "public": 507
-        },
-        "score": 4610,
-        "scored_count": 461,
-        "views_count": 6039
-      },
-      "tags": [
-        "オリジナル",
-        "エイプリルフール",
-        "女の子",
-        "創作",
-        "看板娘",
-        "生絹優"
-      ],
-      "title": "エイプリル企画中",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
     },
     {
       "age_limit": "all-age",
@@ -646,12 +1458,12 @@
       "stats": {
         "commented_count": 8,
         "favorited_count": {
-          "private": 83,
-          "public": 3117
+          "private": 108,
+          "public": 3906
         },
-        "score": 23740,
-        "scored_count": 2374,
-        "views_count": 20142
+        "score": 28600,
+        "scored_count": 2860,
+        "views_count": 25466
       },
       "tags": [
         "カーマ(Fate)",
@@ -671,7 +1483,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -704,12 +1516,12 @@
       "stats": {
         "commented_count": 10,
         "favorited_count": {
-          "private": 126,
-          "public": 2142
+          "private": 150,
+          "public": 2514
         },
-        "score": 17100,
-        "scored_count": 1710,
-        "views_count": 23921
+        "score": 19580,
+        "scored_count": 1958,
+        "views_count": 30779
       },
       "tags": [
         "東方",
@@ -735,7 +1547,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -766,26 +1578,25 @@
       "reuploaded_time": "2019-02-28 00:35:22",
       "sanity_level": "semi_black",
       "stats": {
-        "commented_count": 19,
+        "commented_count": 21,
         "favorited_count": {
-          "private": 212,
-          "public": 3432
+          "private": 252,
+          "public": 4111
         },
-        "score": 24690,
-        "scored_count": 2469,
-        "views_count": 20074
+        "score": 29230,
+        "scored_count": 2923,
+        "views_count": 24909
       },
       "tags": [
         "MOE2019",
         "オリジナル",
         "制服",
         "銀髪",
-        "ぱんつ",
         "高品質パンツ",
         "風のいたずら",
         "ラブレター",
-        "オリジナル1000users入り",
-        "女の子"
+        "女の子",
+        "オリジナル3000users入り"
       ],
       "title": "ラブレターと少女",
       "tools": [
@@ -799,7 +1610,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -830,14 +1641,14 @@
       "reuploaded_time": "2019-02-25 00:19:22",
       "sanity_level": "black",
       "stats": {
-        "commented_count": 8,
+        "commented_count": 9,
         "favorited_count": {
-          "private": 58,
-          "public": 1288
+          "private": 65,
+          "public": 1460
         },
-        "score": 9910,
-        "scored_count": 991,
-        "views_count": 13159
+        "score": 10700,
+        "scored_count": 1070,
+        "views_count": 15852
       },
       "tags": [
         "オリジナル",
@@ -859,7 +1670,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -890,14 +1701,14 @@
       "reuploaded_time": "2019-02-18 00:15:51",
       "sanity_level": "black",
       "stats": {
-        "commented_count": 10,
+        "commented_count": 12,
         "favorited_count": {
-          "private": 185,
-          "public": 3776
+          "private": 241,
+          "public": 4631
         },
-        "score": 26330,
-        "scored_count": 2633,
-        "views_count": 20236
+        "score": 31360,
+        "scored_count": 3136,
+        "views_count": 25810
       },
       "tags": [
         "オリジナル",
@@ -905,11 +1716,11 @@
         "創作",
         "ニーソ",
         "おっぱい",
-        "パンツ半脱ぎ",
-        "ぱんつ",
         "ノーブラ",
-        "オリジナル1000users入り",
-        "胸チラ"
+        "胸チラ",
+        "リプ生地",
+        "ポッキーゲーム",
+        "オリジナル3000users入り"
       ],
       "title": "ブラックベリーちゃん！【タペストリーのお知らせ】",
       "tools": [
@@ -923,7 +1734,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -954,14 +1765,14 @@
       "reuploaded_time": "2019-02-13 08:11:41",
       "sanity_level": "black",
       "stats": {
-        "commented_count": 2,
+        "commented_count": 3,
         "favorited_count": {
-          "private": 108,
-          "public": 719
+          "private": 120,
+          "public": 871
         },
-        "score": 6440,
-        "scored_count": 644,
-        "views_count": 19984
+        "score": 7490,
+        "scored_count": 749,
+        "views_count": 25374
       },
       "tags": [
         "R-18",
@@ -985,7 +1796,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -1018,12 +1829,12 @@
       "stats": {
         "commented_count": 11,
         "favorited_count": {
-          "private": 91,
-          "public": 1947
+          "private": 102,
+          "public": 2191
         },
-        "score": 15600,
-        "scored_count": 1560,
-        "views_count": 14146
+        "score": 17230,
+        "scored_count": 1723,
+        "views_count": 16634
       },
       "tags": [
         "女の子",
@@ -1048,7 +1859,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
+        "name": "色谷あすか＠一日目西り27a",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
@@ -1056,821 +1867,6 @@
         "stats": null
       },
       "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "こちらのイラスト（https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72781519）の過程まとめました！\r\n\r\n◆ミスしてたので投稿しなおしましたすみません…！",
-      "content_type": null,
-      "created_time": "2019-02-01 00:08:51",
-      "favorite_id": 0,
-      "height": 839,
-      "id": 72938238,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/02/01/00/08/51/72938238_ugoira0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/02/01/00/08/51/72938238_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/02/01/00/08/51/72938238_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2019-02-01 00:08:51",
-      "sanity_level": "white",
-      "stats": {
-        "commented_count": 4,
-        "favorited_count": {
-          "private": 65,
-          "public": 2108
-        },
-        "score": 15800,
-        "scored_count": 1580,
-        "views_count": 33416
-      },
-      "tags": [
-        "うごイラ",
-        "Heaven's_Feel",
-        "間桐桜",
-        "Fate/staynight",
-        "メイキング",
-        "血潮",
-        "なるほど分からん",
-        "Fate1000users入り",
-        "うごイラ1000users入り"
-      ],
-      "title": "メイキング4",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "ugoira",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 600
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "HF二章以降、Fate沼にずり落ちた気がしています\r\n\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2019-01-22 00:59:34",
-      "favorite_id": 0,
-      "height": 979,
-      "id": 72781519,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/01/22/00/59/34/72781519_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/01/22/00/59/34/72781519_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/01/22/00/59/34/72781519_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2019-01-22 00:59:34",
-      "sanity_level": "white",
-      "stats": {
-        "commented_count": 20,
-        "favorited_count": {
-          "private": 156,
-          "public": 8115
-        },
-        "score": 65900,
-        "scored_count": 6590,
-        "views_count": 57307
-      },
-      "tags": [
-        "FateHFイラコン",
-        "Fate/staynight",
-        "間桐桜",
-        "Heaven's_Feel",
-        "着衣巨乳",
-        "Fate5000users入り"
-      ],
-      "title": "泥だらけの手を取って",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "こちらのイラスト（https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72698408）の過程まとめました！",
-      "content_type": null,
-      "created_time": "2019-01-21 20:19:39",
-      "favorite_id": 0,
-      "height": 839,
-      "id": 72775716,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/01/21/20/19/39/72775716_ugoira0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/01/21/20/19/39/72775716_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/01/21/20/19/39/72775716_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2019-01-21 20:19:39",
-      "sanity_level": "black",
-      "stats": {
-        "commented_count": 4,
-        "favorited_count": {
-          "private": 48,
-          "public": 1577
-        },
-        "score": 11850,
-        "scored_count": 1185,
-        "views_count": 33643
-      },
-      "tags": [
-        "うごイラ",
-        "Fate/staynight",
-        "間桐桜",
-        "Heaven's_Feel",
-        "衛宮士郎",
-        "メイキング",
-        "士桜",
-        "Fate1000users入り",
-        "うごイラ1000users入り"
-      ],
-      "title": "メイキング3",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "ugoira",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 600
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "ありがとうHF二章…。鍵の渡し方が本当に好きです\r\n春を…待っています………\r\n\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2019-01-17 00:11:32",
-      "favorite_id": 0,
-      "height": 979,
-      "id": 72698408,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/01/17/00/11/32/72698408_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/01/17/00/11/32/72698408_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/01/17/00/11/32/72698408_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2019-01-17 00:11:32",
-      "sanity_level": "semi_black",
-      "stats": {
-        "commented_count": 26,
-        "favorited_count": {
-          "private": 211,
-          "public": 6763
-        },
-        "score": 51220,
-        "scored_count": 5122,
-        "views_count": 63481
-      },
-      "tags": [
-        "FateHFイラコン",
-        "Fate/staynight",
-        "間桐桜",
-        "Heaven's_Feel",
-        "衛宮士郎",
-        "士桜",
-        "涙腺崩壊",
-        "レイン",
-        "Fate5000users入り"
-      ],
-      "title": "「桜だけの正義の味方になる」",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "r18",
-      "book_style": "none",
-      "caption": "<span style=\"color:#fe3a20;\">C95で頒布した「発情期のにゃんこいし」ですが、私が入稿いたしました印刷所：STARBOOKS様のミスにより、一部入稿した色と違う印刷結果になってしまったものが紛れてしまっているため、交換対応をとることになりました。表紙のみの不備となります。</span>\r\n\r\n二枚目が実物の写真になります。肌をよく見ると分かりやすいのですが、全体的に青みがかった色になってしまっています。\r\n会場のみではなく、おそらく書店委託しているものも同様の印刷ミス本が紛れ込んでいると予想されます。\r\nもしお手に取っていただいたものが該当する本だった場合、下記の通りにご対応いただければ綺麗なものと交換させていただきます。\r\n\r\n<span style=\"color:#fe3a20;\">＜交換方法＞\r\n「ヤマト運輸」の「着払い」で下記の住所まで送ってください。</span>\r\n〒112-0001\r\n東京都文京区白山3-6-21\r\nSTARBOOKS 宛\r\nTEL 03-3814-4898\r\n\r\n送付いただく際、返送先を記載したメモを同梱ください。メモがない場合は発送元住所への送付となります。\r\n氏名\r\nご住所\r\n電話番号\r\n\r\n\r\n金銭的負担はございませんがお手間をかけさせてしまうことになってしまい申し訳ないです…。\r\n対応は私個人ではなく印刷所様が行いますので、ご安心いただけたらと思います。\r\n\r\n<span style=\"color:#fe3a20;\">交換期限は2019年7月10日までとなります。</span>\r\n何かご質問などございましたらtwitter（https://twitter.com/sikitani_asuka）にてお問合せくださいませ。\r\nどうぞよろしくお願いいたします。",
-      "content_type": null,
-      "created_time": "2019-01-10 21:46:49",
-      "favorite_id": 0,
-      "height": 457,
-      "id": 72593209,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2019/01/16/20/16/48/72593209_p0.jpg",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2019/01/16/20/16/48/72593209_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2019/01/16/20/16/48/72593209_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": true,
-      "metadata": null,
-      "page_count": 2,
-      "publicity": 0,
-      "reuploaded_time": "2019-01-16 20:16:48",
-      "sanity_level": "black",
-      "stats": {
-        "commented_count": 4,
-        "favorited_count": {
-          "private": 24,
-          "public": 468
-        },
-        "score": 3960,
-        "scored_count": 396,
-        "views_count": 19659
-      },
-      "tags": [
-        "R-18",
-        "東方",
-        "古明地こいし",
-        "C95"
-      ],
-      "title": "【おしらせ】冬コミ新刊の交換対応について",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 800
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "無事出せそうです～！！うちの子のルリ＆流の過去のお話や、優ちゃんの秘密が少し明かされるお話です。けっこう暗め。32P/500円、新刊セットやグッズもあります。\r\n<span style=\"color:#8d0000;\">【2日目リ25b「蒼色彼方」】</span>にて頒布します！お品書きは明日か明後日にでも！\r\n\r\n<span style=\"color:#fe3a20;\">＜通販＞</span>\r\nメロンさん（専売）→https://www.melonbooks.co.jp/detail/detail.php?product_id=459961\r\n\r\n<span style=\"color:#fe3a20;\">同じシリーズのオリジナル漫画無料公開中</span>です！→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72184946\r\n二作目→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=68492397\r\n\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14204603\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2018-12-25 17:46:51",
-      "favorite_id": 0,
-      "height": 988,
-      "id": 72291046,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/12/25/17/46/51/72291046_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/12/25/17/46/51/72291046_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/12/25/17/46/51/72291046_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": true,
-      "metadata": null,
-      "page_count": 13,
-      "publicity": 0,
-      "reuploaded_time": "2018-12-25 17:46:51",
-      "sanity_level": "white",
-      "stats": {
-        "commented_count": 3,
-        "favorited_count": {
-          "private": 19,
-          "public": 615
-        },
-        "score": 5100,
-        "scored_count": 510,
-        "views_count": 15064
-      },
-      "tags": [
-        "漫画",
-        "オリジナル",
-        "創作男女",
-        "人外娘",
-        "ルリ",
-        "看板娘",
-        "C95",
-        "コミックマーケット95",
-        "オリジナル500users入り"
-      ],
-      "title": "【C95】創作シリアス漫画サンプル",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "manga",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "冬コミ三冊目のオリジナルシリアス漫画本表紙です～！！まだ脱稿できてない！！！がんばります！！！！\r\nオリジナル漫画無料公開中です！→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72184946\r\n\r\n<span style=\"color:#fe3a20;\">＜通販＞</span>\r\nメロンさん→https://www.melonbooks.co.jp/detail/detail.php?product_id=459961\r\n\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14204603\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2018-12-23 00:30:38",
-      "favorite_id": 0,
-      "height": 979,
-      "id": 72235448,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/12/23/00/30/38/72235448_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/12/23/00/30/38/72235448_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/12/23/00/30/38/72235448_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2018-12-23 00:30:38",
-      "sanity_level": "white",
-      "stats": {
-        "commented_count": 7,
-        "favorited_count": {
-          "private": 26,
-          "public": 1140
-        },
-        "score": 9580,
-        "scored_count": 958,
-        "views_count": 15042
-      },
-      "tags": [
-        "オリジナル",
-        "C95",
-        "看板娘",
-        "ルリ",
-        "コミックマーケット95",
-        "人外娘",
-        "創作男女",
-        "Оригинальный_персонаж",
-        "創作男女1000users入り",
-        "オリジナル1000users入り"
-      ],
-      "title": "【C95】シロツメクサの罪人",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "冬コミでオリジナル漫画の新刊を出すので、第一作目の「シロツメクサたちへの葬送曲」を全編公開することにしました～！うちの子たちの物語、ぜひ読んでいただけたら嬉しいです(✿´ ꒳ ` )\r\n一作目を読んでたら飛ばして三作目読んでも大丈夫なので、冬コミ新刊もぜひチェックしてください～！\r\n二作目→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=68492397\r\n三作目→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72291046\r\n\r\n\r\n実本は既に完売しているのですが、高解像度PDF＆JPG版は各DLサイトにありますので気に入りましたらよろしくお願いします。内容に変わりはありません。\r\n<span style=\"color:#fe3a20;\">＜電子書籍版＞</span>\r\nメロンブックス→https://www.melonbooks.com/index.php?main_page=maker_affiliate_go&affiliate_id=AF0000029005\r\nDLsite→https://www.dlsite.com/home/dlaf/=/link/work/aid/aoiro/id/RJ239664.html\r\nDMM→https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_140149/aokana-001\r\n\r\n二作目以降も順次電子版を用意しようとは思っています（来年以降）",
-      "content_type": null,
-      "created_time": "2018-12-19 19:26:01",
-      "favorite_id": 0,
-      "height": 909,
-      "id": 72184946,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/12/19/19/26/01/72184946_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/12/19/19/26/01/72184946_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/12/19/19/26/01/72184946_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": true,
-      "metadata": null,
-      "page_count": 28,
-      "publicity": 0,
-      "reuploaded_time": "2018-12-19 19:26:01",
-      "sanity_level": "white",
-      "stats": {
-        "commented_count": 3,
-        "favorited_count": {
-          "private": 33,
-          "public": 791
-        },
-        "score": 6750,
-        "scored_count": 675,
-        "views_count": 16038
-      },
-      "tags": [
-        "漫画",
-        "オリジナル",
-        "看板娘",
-        "【同人再録】",
-        "オリジナル500users入り",
-        "創作男女",
-        "創作男女500users入り",
-        "人外娘",
-        "Оригинальный_персонаж"
-      ],
-      "title": "【同人再録】人外青年×人外少女",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "manga",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 650
-    },
-    {
-      "age_limit": "r18",
-      "book_style": "none",
-      "caption": "<span style=\"color:#fe3a20;\">冬コミ新刊一冊目</span>→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72059935\r\n発情期で積極的なこいしとセックスする本です。単品28P/500円、新刊セットや載ってませんがグッズもあります。【2日目リ25b「蒼色彼方」】にて頒布、もし余れば3日目キ46a「ねこぬこまりも」さんにも委託させていただきます。\r\n詳細は完成版おしながきにて公開しますので、少々お待ちくださいませ＞＜\r\n\r\n<span style=\"color:#fe3a20;\">＜通販＞</span>\r\nメロンブックス様→https://www.melonbooks.co.jp/detail/detail.php?product_id=452113\r\nとらのあな様→https://ec.toranoana.jp/tora_r/ec/item/040030690980\r\n\r\n高画質＆修正薄め版→https://www.pixiv.net/fanbox/creator/3188698/post/227833\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14204603\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2018-12-15 22:41:22",
-      "favorite_id": 0,
-      "height": 988,
-      "id": 72127889,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/12/15/22/41/22/72127889_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/12/15/22/41/22/72127889_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/12/15/22/41/22/72127889_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": true,
-      "metadata": null,
-      "page_count": 7,
-      "publicity": 0,
-      "reuploaded_time": "2018-12-15 22:41:22",
-      "sanity_level": "black",
-      "stats": {
-        "commented_count": 5,
-        "favorited_count": {
-          "private": 243,
-          "public": 1546
-        },
-        "score": 12700,
-        "scored_count": 1270,
-        "views_count": 35828
-      },
-      "tags": [
-        "R-18",
-        "漫画",
-        "東方",
-        "古明地こいし",
-        "冬コミ",
-        "C95",
-        "オナバレ",
-        "東方Project1000users入り",
-        "極上の腹"
-      ],
-      "title": "【C95】猫こいし発情期本",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "manga",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "冬コミ新刊二冊目の全年齢向け差分です！タペストリーにもなります！！\r\nサテン生地なので普通のタペストリーよりも肌触りがすべすべです！\r\n\r\n<span style=\"color:#fe3a20;\">＜新刊通販（リンク先R18）＞</span>\r\nメロンブックス様→https://www.melonbooks.co.jp/detail/detail.php?product_id=452113\r\nとらのあな様→https://ec.toranoana.jp/tora_r/ec/item/040030690980\r\n\r\n<span style=\"color:#fe3a20;\">冬コミ新刊一冊目</span>→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72059935\r\n\r\n高画質版→https://www.pixiv.net/fanbox/creator/3188698/post/221985\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14204603\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2018-12-14 04:10:02",
-      "favorite_id": 0,
-      "height": 910,
-      "id": 72103439,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/12/14/04/10/02/72103439_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/12/14/04/10/02/72103439_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/12/14/04/10/02/72103439_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2018-12-14 04:10:02",
-      "sanity_level": "black",
-      "stats": {
-        "commented_count": 15,
-        "favorited_count": {
-          "private": 272,
-          "public": 3012
-        },
-        "score": 21770,
-        "scored_count": 2177,
-        "views_count": 26053
-      },
-      "tags": [
-        "東方",
-        "古明地こいし",
-        "冬コミ",
-        "C95",
-        "ねこいし",
-        "極上の腹",
-        "指を突っ込みたいへそ",
-        "マイクロビキニ",
-        "紐パン",
-        "東方Project1000users入り"
-      ],
-      "title": "【C95】にゃんこいしのお誘い",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 650
-    },
-    {
-      "age_limit": "r18",
-      "book_style": "none",
-      "caption": "ヴァジラ＆ジータ獣姦合同を頒布します！イチャラブ獣姦と無理やり獣姦の二本立てです。32Pになります。\r\n表紙はジータ線画をにゃこたん（https://www.pixiv.net/member.php?id=3432344）、ヴァジラ＆塗りを私が担当しました！\r\n\r\n<span style=\"color:#fe3a20;\">＜頒布箇所＞</span>\r\n2日目リ25b「蒼色彼方」、3日目キ46a「ねこぬこまりも」\r\n\r\n<span style=\"color:#fe3a20;\">＜通販＞</span>\r\nメロンブックス様→https://www.melonbooks.co.jp/detail/detail.php?product_id=448131\r\nとらのあな様→https://ec.toranoana.jp/tora_r/ec/item/040030688629\r\n\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14204603\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2018-12-11 00:11:59",
-      "favorite_id": 0,
-      "height": 989,
-      "id": 72059935,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/12/11/00/11/59/72059935_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/12/11/00/11/59/72059935_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/12/11/00/11/59/72059935_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": true,
-      "metadata": null,
-      "page_count": 6,
-      "publicity": 0,
-      "reuploaded_time": "2018-12-11 00:11:59",
-      "sanity_level": "black",
-      "stats": {
-        "commented_count": 9,
-        "favorited_count": {
-          "private": 181,
-          "public": 1151
-        },
-        "score": 10250,
-        "scored_count": 1025,
-        "views_count": 31850
-      },
-      "tags": [
-        "R-18",
-        "漫画",
-        "グランブルーファンタジー",
-        "ヴァジラ",
-        "ジータ(グラブル)",
-        "獣姦",
-        "タイツ",
-        "C95",
-        "異種和姦",
-        "グラブル1000users入り"
-      ],
-      "title": "【C95】獣姦本サンプル",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "manga",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "r18",
-      "book_style": "none",
-      "caption": "冬コミ新刊一冊目の表紙です！グラブル獣姦合同誌になります。\r\nジータ線画をにゃこたん（https://www.pixiv.net/member.php?id=3432344）、ヴァジラ＆塗りを私が担当しました！\r\n\r\n<span style=\"color:#fe3a20;\">＜書店委託＞</span>\r\nメロンブックス様→https://www.melonbooks.co.jp/detail/detail.php?product_id=448131\r\nとらのあな様→https://ec.toranoana.jp/tora_r/ec/item/040030688629\r\n\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14204603\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2018-12-05 00:08:59",
-      "favorite_id": 0,
-      "height": 988,
-      "id": 71967123,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/12/05/00/08/59/71967123_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/12/05/00/08/59/71967123_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/12/05/00/08/59/71967123_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2018-12-05 00:08:59",
-      "sanity_level": "black",
-      "stats": {
-        "commented_count": 12,
-        "favorited_count": {
-          "private": 182,
-          "public": 1705
-        },
-        "score": 13670,
-        "scored_count": 1367,
-        "views_count": 20326
-      },
-      "tags": [
-        "R-18",
-        "グランブルーファンタジー",
-        "ジータ(グラブル)",
-        "ヴァジラ",
-        "タイツ",
-        "グラブル1000users入り",
-        "冬コミ",
-        "C95",
-        "コミックマーケット95",
-        "獣姦"
-      ],
-      "title": "【冬コミ】イヌカミックス！",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 700
-    },
-    {
-      "age_limit": "all-age",
-      "book_style": "none",
-      "caption": "冬コミで新刊セットに入るアクキーのイラストです！フランちゃんver→https://www.pixiv.net/member_illust.php?mode=medium&illust_id=70639704\r\n\r\n◆高解像度版→FANBOX：https://www.pixiv.net/fanbox/creator/3188698/post/212139\r\n◆webカタログ：https://webcatalog-free.circle.ms/Circle/14204603\r\n◆twitter：https://twitter.com/sikitani_asuka",
-      "content_type": null,
-      "created_time": "2018-11-26 00:19:08",
-      "favorite_id": 0,
-      "height": 593,
-      "id": 71836135,
-      "image_urls": {
-        "large": "https://i.pximg.net/img-original/img/2018/11/26/00/19/08/71836135_p0.png",
-        "px_128x128": "https://i.pximg.net/c/128x128/img-master/img/2018/11/26/00/19/08/71836135_p0_square1200.jpg",
-        "px_480mw": "https://i.pximg.net/c/480x960/img-master/img/2018/11/26/00/19/08/71836135_p0_master1200.jpg"
-      },
-      "is_liked": false,
-      "is_manga": false,
-      "metadata": null,
-      "page_count": 1,
-      "publicity": 0,
-      "reuploaded_time": "2018-11-26 00:19:08",
-      "sanity_level": "white",
-      "stats": {
-        "commented_count": 10,
-        "favorited_count": {
-          "private": 30,
-          "public": 1311
-        },
-        "score": 10750,
-        "scored_count": 1075,
-        "views_count": 13857
-      },
-      "tags": [
-        "猫耳",
-        "東方",
-        "ケモミミ",
-        "秦こころ",
-        "冬コミ",
-        "C95",
-        "SD",
-        "東方Project",
-        "東方Project1000users入り"
-      ],
-      "title": "「これは甘えたいの表情」",
-      "tools": [
-        "PhotoStudio"
-      ],
-      "type": "illustration",
-      "user": {
-        "account": "aoirokanata",
-        "id": 3188698,
-        "is_follower": false,
-        "is_following": false,
-        "is_friend": false,
-        "is_premium": null,
-        "name": "色谷あすか＠例大祭あ37ab",
-        "profile": null,
-        "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2019/01/18/08/58/36/15273963_0186ba250661e5320a63ac4ccc30bc33_50.png"
-        },
-        "stats": null
-      },
-      "width": 550
     }
   ],
   "status": "success"

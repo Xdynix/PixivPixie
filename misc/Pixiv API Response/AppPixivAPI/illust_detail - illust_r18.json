@@ -5,9 +5,9 @@
     "height": 1001,
     "id": 73030422,
     "image_urls": {
-      "large": "https://i.pximg.net/c/600x1200_90/img-master/img/2019/02/06/05/15/37/73030422_p0_master1200.jpg",
+      "large": "https://i.pximg.net/c/600x1200_90_webp/img-master/img/2019/02/06/05/15/37/73030422_p0_master1200.jpg",
       "medium": "https://i.pximg.net/c/540x540_70/img-master/img/2019/02/06/05/15/37/73030422_p0_master1200.jpg",
-      "square_medium": "https://i.pximg.net/c/360x360_70/img-master/img/2019/02/06/05/15/37/73030422_p0_square1200.jpg"
+      "square_medium": "https://i.pximg.net/c/540x540_10_webp/img-master/img/2019/02/06/05/15/37/73030422_p0_square1200.jpg"
     },
     "is_bookmarked": false,
     "is_muted": false,
@@ -41,9 +41,9 @@
     "tools": [
       "CLIP STUDIO PAINT"
     ],
-    "total_bookmarks": 8254,
-    "total_comments": 21,
-    "total_view": 56577,
+    "total_bookmarks": 10879,
+    "total_comments": 29,
+    "total_view": 76774,
     "type": "illust",
     "user": {
       "account": "tatuki",

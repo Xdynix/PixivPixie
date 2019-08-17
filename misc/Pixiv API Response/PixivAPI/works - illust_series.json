@@ -54,12 +54,12 @@
       "stats": {
         "commented_count": 2,
         "favorited_count": {
-          "private": 2,
-          "public": 316
+          "private": 4,
+          "public": 358
         },
-        "score": 3380,
-        "scored_count": 338,
-        "views_count": 10664
+        "score": 3850,
+        "scored_count": 385,
+        "views_count": 14698
       },
       "tags": [
         "漫画",
@@ -79,7 +79,7 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "ぐらんで@１巻発売中",
+        "name": "ぐらんで@２巻発売中",
         "profile": null,
         "profile_image_urls": {
           "px_50x50": "https://i.pximg.net/user-profile/img/2017/09/23/16/50/36/13261114_f48d2e460feed048b46bf45f3ba8c808_50.png"

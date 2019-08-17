@@ -46,12 +46,12 @@
       "stats": {
         "commented_count": 55,
         "favorited_count": {
-          "private": 173,
-          "public": 6788
+          "private": 192,
+          "public": 7301
         },
-        "score": 67260,
-        "scored_count": 6726,
-        "views_count": 175963
+        "score": 72130,
+        "scored_count": 7213,
+        "views_count": 195740
       },
       "tags": [
         "漫画",
@@ -77,10 +77,10 @@
         "is_following": false,
         "is_friend": false,
         "is_premium": null,
-        "name": "天沢夏久",
+        "name": "天沢夏久@1日目西れ-15a",
         "profile": null,
         "profile_image_urls": {
-          "px_50x50": "https://i.pximg.net/user-profile/img/2017/10/09/23/49/03/13325697_419bc1ed7327fd39d687883a4ecad559_50.jpg"
+          "px_50x50": "https://i.pximg.net/user-profile/img/2019/06/12/09/36/58/15880049_6af6cb7d6026f944cb955c606e3f40b9_50.jpg"
         },
         "stats": null
       },

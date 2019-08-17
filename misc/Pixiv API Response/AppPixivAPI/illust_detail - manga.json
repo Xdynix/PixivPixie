@@ -5,27 +5,27 @@
     "height": 1200,
     "id": 72821333,
     "image_urls": {
-      "large": "https://i.pximg.net/c/600x1200_90/img-master/img/2019/01/24/20/00/01/72821333_p0_master1200.jpg",
+      "large": "https://i.pximg.net/c/600x1200_90_webp/img-master/img/2019/01/24/20/00/01/72821333_p0_master1200.jpg",
       "medium": "https://i.pximg.net/c/540x540_70/img-master/img/2019/01/24/20/00/01/72821333_p0_master1200.jpg",
-      "square_medium": "https://i.pximg.net/c/360x360_70/img-master/img/2019/01/24/20/00/01/72821333_p0_square1200.jpg"
+      "square_medium": "https://i.pximg.net/c/540x540_10_webp/img-master/img/2019/01/24/20/00/01/72821333_p0_square1200.jpg"
     },
     "is_bookmarked": false,
     "is_muted": false,
     "meta_pages": [
       {
         "image_urls": {
-          "large": "https://i.pximg.net/c/600x1200_90/img-master/img/2019/01/24/20/00/01/72821333_p0_master1200.jpg",
+          "large": "https://i.pximg.net/c/600x1200_90_webp/img-master/img/2019/01/24/20/00/01/72821333_p0_master1200.jpg",
           "medium": "https://i.pximg.net/c/540x540_70/img-master/img/2019/01/24/20/00/01/72821333_p0_master1200.jpg",
           "original": "https://i.pximg.net/img-original/img/2019/01/24/20/00/01/72821333_p0.jpg",
-          "square_medium": "https://i.pximg.net/c/360x360_70/img-master/img/2019/01/24/20/00/01/72821333_p0_square1200.jpg"
+          "square_medium": "https://i.pximg.net/c/360x360_10_webp/img-master/img/2019/01/24/20/00/01/72821333_p0_square1200.jpg"
         }
       },
       {
         "image_urls": {
-          "large": "https://i.pximg.net/c/600x1200_90/img-master/img/2019/01/24/20/00/01/72821333_p1_master1200.jpg",
+          "large": "https://i.pximg.net/c/600x1200_90_webp/img-master/img/2019/01/24/20/00/01/72821333_p1_master1200.jpg",
           "medium": "https://i.pximg.net/c/540x540_70/img-master/img/2019/01/24/20/00/01/72821333_p1_master1200.jpg",
           "original": "https://i.pximg.net/img-original/img/2019/01/24/20/00/01/72821333_p1.jpg",
-          "square_medium": "https://i.pximg.net/c/360x360_70/img-master/img/2019/01/24/20/00/01/72821333_p1_square1200.jpg"
+          "square_medium": "https://i.pximg.net/c/360x360_10_webp/img-master/img/2019/01/24/20/00/01/72821333_p1_square1200.jpg"
         }
       }
     ],
@@ -80,17 +80,17 @@
     "tools": [
       "CLIP STUDIO PAINT"
     ],
-    "total_bookmarks": 6961,
+    "total_bookmarks": 7493,
     "total_comments": 55,
-    "total_view": 175964,
+    "total_view": 195740,
     "type": "manga",
     "user": {
       "account": "almeida",
       "id": 1375609,
       "is_followed": false,
-      "name": "天沢夏久",
+      "name": "天沢夏久@1日目西れ-15a",
       "profile_image_urls": {
-        "medium": "https://i.pximg.net/user-profile/img/2017/10/09/23/49/03/13325697_419bc1ed7327fd39d687883a4ecad559_170.jpg"
+        "medium": "https://i.pximg.net/user-profile/img/2019/06/12/09/36/58/15880049_6af6cb7d6026f944cb955c606e3f40b9_170.jpg"
       }
     },
     "visible": true,

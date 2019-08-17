@@ -5,9 +5,9 @@
     "height": 480,
     "id": 72857773,
     "image_urls": {
-      "large": "https://i.pximg.net/c/600x1200_90/img-master/img/2019/01/26/22/35/03/72857773_master1200.jpg",
+      "large": "https://i.pximg.net/c/600x1200_90_webp/img-master/img/2019/01/26/22/35/03/72857773_master1200.jpg",
       "medium": "https://i.pximg.net/c/540x540_70/img-master/img/2019/01/26/22/35/03/72857773_master1200.jpg",
-      "square_medium": "https://i.pximg.net/c/360x360_70/img-master/img/2019/01/26/22/35/03/72857773_square1200.jpg"
+      "square_medium": "https://i.pximg.net/c/540x540_10_webp/img-master/img/2019/01/26/22/35/03/72857773_square1200.jpg"
     },
     "is_bookmarked": false,
     "is_muted": false,
@@ -41,11 +41,11 @@
         "translated_name": null
       },
       {
-        "name": "五等分の花嫁1000users入り",
+        "name": "うごイラ",
         "translated_name": null
       },
       {
-        "name": "うごイラ",
+        "name": "五等分の花嫁5000users入り",
         "translated_name": null
       }
     ],
@@ -53,9 +53,9 @@
     "tools": [
       "CLIP STUDIO PAINT"
     ],
-    "total_bookmarks": 4973,
-    "total_comments": 101,
-    "total_view": 72633,
+    "total_bookmarks": 5362,
+    "total_comments": 102,
+    "total_view": 81516,
     "type": "ugoira",
     "user": {
       "account": "evil000000s",
