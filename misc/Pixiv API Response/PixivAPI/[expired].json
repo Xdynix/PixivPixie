@@ -1,9 +1,0 @@
-{
-  "errors": {
-    "system": {
-      "message": "The access token provided is invalid."
-    }
-  },
-  "has_error": true,
-  "status": "failure"
-}
