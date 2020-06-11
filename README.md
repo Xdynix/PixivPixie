@@ -34,7 +34,7 @@ P.S. English and Chinese discussion is OK. Please forgive me for the poor Englis
 ## Development
 
 ```shell script
-clone https://github.com/Xdynix/PixivPixie.git
+git clone https://github.com/Xdynix/PixivPixie.git
 cd PixivPixie
 
 # Setup and activate virtualenv
@@ -47,3 +47,5 @@ pip install -r requirements-dev.txt
 pip install -e .
 pre-commit install
 ```
+
+To run tests, simply use command `pytest`.
