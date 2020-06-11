@@ -10,9 +10,10 @@ repos:
     rev: 3.8.3
     hooks:
       - id: flake8
-  - repo: https://github.com/pycqa/pylint
-    rev: pylint-2.5.3
+  - repo: local
     hooks:
       - id: pylint
-        args:
-          - pixiv_pixie
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
