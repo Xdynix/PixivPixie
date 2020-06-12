@@ -8,7 +8,6 @@ from .schemas import AUTH_RESPONSE_SCHEMA
 from .secret import SECRET
 
 
-@pytest.mark.webtest
 def test_auth():
     """Test authenticate with username+password and refresh token."""
 
@@ -22,7 +21,6 @@ def test_auth():
     validate(instance=response, schema=AUTH_RESPONSE_SCHEMA)
 
 
-@pytest.mark.webtest
 def test_auth_failed():
     """Test BasePixivAPI behavior on failed authentication."""
 

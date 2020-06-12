@@ -48,7 +48,7 @@ pip install -e .
 pre-commit install
 ```
 
-To run tests, simply use command `pytest -m "not webtest"`.
+To run tests, simply use command `pytest --ignore webtests`.
 
 ---
 
@@ -64,4 +64,4 @@ testing in the following format:
 }
 ```
 
-Then use command `pytest -m webtest` to run web tests.
+Then use command `pytest webtests` to run web tests.

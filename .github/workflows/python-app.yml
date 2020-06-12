@@ -38,4 +38,4 @@ jobs:
           pylint pixiv_pixie
       - name: Test with pytest
         run: |
-          pytest
+          pytest --ignore webtests

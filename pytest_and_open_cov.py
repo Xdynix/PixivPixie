@@ -10,7 +10,7 @@ def main():
     """Main function."""
 
     pytest.main([
-        '-m', 'not webtest',
+        '--ignore', 'webtests',
         '--cov', 'pixiv_pixie',
         '--cov-report', 'html',
     ])
