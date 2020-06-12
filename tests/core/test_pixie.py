@@ -1,6 +1,6 @@
 """Unit tests for pixiv_pixie.core.pixie."""
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from unittest.mock import patch
 
 import pytest
@@ -17,14 +17,13 @@ from ..utils import get_fake_datetime, get_fake_response_factory
 class TestSession:
     """Unit tests for Session."""
 
-    def test_create_date_default(self, monkeypatch):
+    def test_create_date_default(self):
         """Test that the default value of Session.create_date is datetime.utcnow()."""
 
         now = datetime.utcnow()
-        monkeypatch.setattr(pixiv_pixie.core.pixie, 'datetime', get_fake_datetime(now))
-
-        assert Session().create_date == now
-        assert Session(create_date=datetime(2000, 1, 1)).create_date != now
+        session = Session()
+        # It's hard to mock the default factory of Session.create_date, therefore only approximate comparisons are made.
+        assert now - timedelta(seconds=2) < session.create_date < now + timedelta(seconds=2)
 
     def test_expiration_date(self):
         """Test the calculation of `expiration_date`."""
