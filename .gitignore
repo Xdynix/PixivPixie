@@ -1,4 +1,6 @@
 .idea/
+secret.json
+temp*.py
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template

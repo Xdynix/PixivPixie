@@ -1,3 +1,4 @@
+jsonschema
 pre-commit
 pylint
 pytest
