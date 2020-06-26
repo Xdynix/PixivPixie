@@ -38,7 +38,7 @@ git clone https://github.com/Xdynix/PixivPixie.git
 cd PixivPixie
 
 # Setup and activate virtualenv
-virtualenv venv
+virtualenv venv  # Please use the name `venv`, otherwise the configuration file may not work properly
 .\venv\Scripts\activate  # on Windows
 source venv/bin/activate  # on POSIX
 
@@ -48,7 +48,7 @@ pip install -e .
 pre-commit install
 ```
 
-To run tests, simply use command `pytest --ignore webtests`.
+To run tests, simply use command `pytest`.
 
 ---
 
