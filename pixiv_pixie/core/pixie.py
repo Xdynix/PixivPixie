@@ -130,7 +130,11 @@ class PixivPixie(PixivInterface):
 
     def _auth(self, username: str = None, password: str = None, refresh_token: str = None) -> Session:
         try:
-            response = self._aapi.auth(username, password, refresh_token)['response']
+            response = self._aapi.auth(
+                username=username,
+                password=password,
+                refresh_token=refresh_token,
+            )['response']
         except PixivPyError as ex:
             raise AuthFailed(str(ex))
         else:

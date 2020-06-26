@@ -37,10 +37,10 @@ P.S. English and Chinese discussion is OK. Please forgive me for the poor Englis
 git clone https://github.com/Xdynix/PixivPixie.git
 cd PixivPixie
 
-# Setup and activate virtualenv
-virtualenv venv  # Please use the name `venv`, otherwise the configuration file may not work properly
-.\venv\Scripts\activate  # on Windows
-source venv/bin/activate  # on POSIX
+# Setup and activate virtualenv.
+virtualenv venv  # Please use the name `venv`, otherwise the configuration file may not work properly.
+.\venv\Scripts\activate  # On Windows environment.
+source venv/bin/activate  # On POSIX (Linux/MacOS/Other) environment.
 
 pip install -r requirements.txt
 pip install -r requirements-dev.txt

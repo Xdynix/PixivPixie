@@ -1,6 +1,6 @@
 """JSON schemas used by web tests."""
 
-AUTH_RESPONSE_SCHEMA = {
+AUTH_RESPONSE_SCHEMA = {  # Response of BasePixivAPI.auth().
     'type': 'object',
     'properties': {
         'response': {

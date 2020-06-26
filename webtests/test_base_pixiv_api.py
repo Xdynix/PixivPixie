@@ -8,23 +8,23 @@ from .schemas import AUTH_RESPONSE_SCHEMA
 from .secret import SECRET
 
 
-def test_auth():
-    """Test authenticate with username+password and refresh token."""
+@pytest.fixture
+def api():
+    return BasePixivAPI(**SECRET['requests_kwargs'])
 
-    api = BasePixivAPI(**SECRET['requests_kwargs'])
+
+def test_auth(api):
+    """Test authenticate with username+password and refresh token."""
 
     response = api.auth(username=SECRET['username'], password=SECRET['password'])
     validate(instance=response, schema=AUTH_RESPONSE_SCHEMA)
 
-    refresh_token = response.response.refresh_token
-    response = api.auth(refresh_token=refresh_token)
+    response = api.auth(refresh_token=response['response']['refresh_token'])
     validate(instance=response, schema=AUTH_RESPONSE_SCHEMA)
 
 
-def test_auth_failed():
+def test_auth_failed(api):
     """Test BasePixivAPI behavior on failed authentication."""
-
-    api = BasePixivAPI(**SECRET['requests_kwargs'])
 
     with pytest.raises(PixivPyError):
         api.auth(username='bad-user@example.com', password='password')

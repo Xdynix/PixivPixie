@@ -7,7 +7,7 @@ Attributes:
 import json
 from pathlib import Path
 
-from jsonschema import validate
+from jsonschema import validate, ValidationError
 
 SECRET_FILE = Path(__file__).parent.parent / 'secret.json'
 SECRET_SCHEMA = {
@@ -49,11 +49,9 @@ except FileNotFoundError:
     _save_secret(SECRET)
     raise RuntimeError('secret.json not found. A default secret.json has been created.')
 except json.JSONDecodeError:
-    _save_secret(SECRET)
-    raise RuntimeError('Invalid json file. A default secret.json has been created.')
-except ValueError:
-    _save_secret(SECRET)
-    raise RuntimeError('Invalid secret.json format. A default secret.json has been created.')
+    raise RuntimeError('Invalid json file.')
+except ValidationError as e:
+    raise RuntimeError(f'Invalid secret.json format: {e!s}')
 
 __all__ = (
     'SECRET',

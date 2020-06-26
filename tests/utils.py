@@ -37,6 +37,7 @@ def get_fake_response_factory(content: Union[str, list, dict], status_code: int 
         Attributes:
             text (str): Response content.
             status_code (int): Response status code.
+            headers (dict): Response headers.
         """
 
         text: str
