@@ -1,2 +1,2 @@
-PixivPy
-attrs
+PixivPy>=3.5.9
+attrs>=19.0.0

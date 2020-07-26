@@ -1,6 +1,6 @@
-jsonschema
-flake8
-pre-commit
-pylint
-pytest
-pytest-cov
+jsonschema~=3.2.0
+flake8~=3.8.3
+pre-commit~=2.5.1
+pylint~=2.5.3
+pytest~=5.4.3
+pytest-cov~=2.10.0
