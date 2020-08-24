@@ -50,8 +50,8 @@ except FileNotFoundError:
     raise RuntimeError('secret.json not found. A default secret.json has been created.')
 except json.JSONDecodeError:
     raise RuntimeError('Invalid json file.')
-except ValidationError as e:
-    raise RuntimeError(f'Invalid secret.json format: {e!s}')
+except ValidationError as ex:
+    raise RuntimeError(f'Invalid secret.json format: {ex!s}')
 
 __all__ = (
     'SECRET',

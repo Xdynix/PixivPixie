@@ -4,6 +4,8 @@ repos:
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://gitlab.com/PyCQA/flake8
     rev: 3.8.3
@@ -16,3 +18,9 @@ repos:
         entry: python ./run_in_venv.py pylint  # Since PyCharm will not execute git hooks in virtualenv.
         language: system
         types: [python]
+      - id: pytest
+        name: pytest
+        entry: python ./run_in_venv.py pytest  # Since PyCharm will not execute git hooks in virtualenv.
+        language: system
+        always_run: true
+        pass_filenames: false

@@ -64,4 +64,4 @@ testing in the following format:
 }
 ```
 
-Then use command `pytest webtests` to run web tests.
+Then use command `pytest webtests --no-cov` to run web tests.

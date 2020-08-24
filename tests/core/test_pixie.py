@@ -67,6 +67,7 @@ class TestPixivPixie:
 
     @pytest.fixture
     def pixie(self):
+        """Fixture that returns a PixivPixie object."""
         return PixivPixie()
 
     @pytest.fixture

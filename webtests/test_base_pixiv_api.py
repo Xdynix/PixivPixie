@@ -8,26 +8,28 @@ from .schemas import AUTH_RESPONSE_SCHEMA
 from .secret import SECRET
 
 
-@pytest.fixture
-def api():
-    return BasePixivAPI(**SECRET['requests_kwargs'])
+class TestBasePixivAPI:
+    """Web tests for pixivpy3.api.BasePixivAPI."""
 
+    @pytest.fixture
+    def api(self):
+        """Fixture that returns a BasePixivAPI object."""
+        return BasePixivAPI(**SECRET['requests_kwargs'])
 
-def test_auth(api):
-    """Test authenticate with username+password and refresh token."""
+    def test_auth(self, api):
+        """Test authenticate with username+password and refresh token."""
 
-    response = api.auth(username=SECRET['username'], password=SECRET['password'])
-    validate(instance=response, schema=AUTH_RESPONSE_SCHEMA)
+        response = api.auth(username=SECRET['username'], password=SECRET['password'])
+        validate(instance=response, schema=AUTH_RESPONSE_SCHEMA)
 
-    response = api.auth(refresh_token=response['response']['refresh_token'])
-    validate(instance=response, schema=AUTH_RESPONSE_SCHEMA)
+        response = api.auth(refresh_token=response['response']['refresh_token'])
+        validate(instance=response, schema=AUTH_RESPONSE_SCHEMA)
 
+    def test_auth_failed(self, api):
+        """Test BasePixivAPI behavior on failed authentication."""
 
-def test_auth_failed(api):
-    """Test BasePixivAPI behavior on failed authentication."""
+        with pytest.raises(PixivPyError):
+            api.auth(username='bad-user@example.com', password='password')
 
-    with pytest.raises(PixivPyError):
-        api.auth(username='bad-user@example.com', password='password')
-
-    with pytest.raises(PixivPyError):
-        api.auth(refresh_token='1234567890')
+        with pytest.raises(PixivPyError):
+            api.auth(refresh_token='1234567890')
