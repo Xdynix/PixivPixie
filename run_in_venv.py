@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Activate virtualenv before executing command."""
 
 import os
@@ -5,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-VIRTUALENV_DIR = 'venv'
+VIRTUALENV_DIR = os.environ.get('VIRTUAL_ENV') or 'venv'
 
 
 def main():
@@ -15,7 +16,10 @@ def main():
     activate_this = activate_this.absolute()
     with activate_this.open('rt', encoding='utf-8') as f:
         exec(f.read(), {'__file__': str(activate_this)})  # pylint: disable=exec-used
-    subprocess.run(sys.argv[1:], check=True)
+    try:
+        subprocess.run(sys.argv[1:], check=True)
+    except subprocess.CalledProcessError as error:
+        sys.exit(error.returncode)
 
 
 if __name__ == '__main__':
