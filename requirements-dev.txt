@@ -1,5 +1,5 @@
 jsonschema~=3.2.0
-pre-commit~=2.7.1
-pylint~=2.6.0
-pytest~=6.0.1
-pytest-cov~=2.10.1
+pre-commit~=2.13.0
+pylint~=2.8.2
+pytest~=6.2.4
+pytest-cov~=2.12.0
