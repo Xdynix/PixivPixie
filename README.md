@@ -52,13 +52,14 @@ To run tests, simply use command `pytest`.
 
 ---
 
-To run web tests, which which will check the availability of Pixiv's API and the schema of the response data, you need to first
+To run web tests, which will check the availability of Pixiv's API and the schema of the response data, you need to first
 create the file `secret.json` in the root directory of the project, and fill in the account information you will use for
 testing in the following format:
 
 ```json
 {
   "password": "pa33w0rd",
+  "refresh_token": "123456789_abcdefghijk",
   "requests_kwargs": {},
   "username": "foobar@example.com"
 }

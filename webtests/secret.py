@@ -15,17 +15,18 @@ SECRET_SCHEMA = {
     'properties': {
         'username': {'type': 'string'},
         'password': {'type': 'string'},
+        'refresh_token': {'type': 'string'},
         'requests_kwargs': {'type': 'object'},
     },
     'required': [
-        'username',
-        'password',
+        'refresh_token',
         'requests_kwargs',
     ],
 }
 SECRET = {
     'username': 'USERNAME',
     'password': 'PASSWORD',
+    'refresh_token': 'REFRESH-TOKEN',
     'requests_kwargs': {},
 }
 validate(instance=SECRET, schema=SECRET_SCHEMA)
