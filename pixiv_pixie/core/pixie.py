@@ -1,5 +1,6 @@
 """Main PixivPixie API."""
 
+import warnings
 from datetime import datetime, timedelta
 from typing import Dict, Any, Optional
 
@@ -151,7 +152,7 @@ class PixivPixie(PixivInterface):
             )
 
     def login(self, username: str, password: str):
-        """Authenticate with username and password.
+        """Authenticate with username and password. Deprecated. Use refresh_session() instead.
 
         Args:
             username (str): The account name used when the user logs in. Usually is the email address or a shorter Pixiv ID.
@@ -161,6 +162,8 @@ class PixivPixie(PixivInterface):
             AuthFailed: If the username and password is incorrect.
         """
 
+        warnings.warn('Pixiv no longer supports logging in with a username and password. '
+                      'Use refresh token instead.', DeprecationWarning)
         self.session = self._auth(username=username, password=password)
 
     def refresh_session(self, refresh_token: str = None):
